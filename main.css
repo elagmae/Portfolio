@@ -1,0 +1,355 @@
+/*#region Texts*/
+
+h1
+{
+    font-family: "Anton", serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color:#ffffff;
+    padding-left: 45px;
+    padding-top: 45px;
+    font-size: 35px;
+}
+
+h2
+{
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+    color: #a4b3ff;
+    font-size : 50px;
+    text-align: center;
+}
+
+h3
+{
+    font-family: "Anton", serif;
+    font-weight: 200;
+    font-style: normal;
+    color:#ffffffe4;
+    text-align: center;
+    font-size : 25px;
+}
+
+
+h4
+{
+    font-family: "Anton", serif;
+    font-weight:100;
+    font-style: normal;
+    justify-self: left;
+    font-size:30px;
+}
+
+h5
+{
+    font-family: "Anton", serif;
+    font-weight:100;
+    font-style: normal;
+    color:#ffffffe4;
+    text-align: center;
+    font-size : 25px;
+    line-height: 0.3px;
+    font-weight: lighter;
+}
+
+h6
+{
+    font-family: "Anton", serif;
+    font-weight:100;
+    font-style: normal;
+    color:#ffffffe4;
+    text-align: center;
+    font-size : 15px;
+    font-weight: lighter;
+}
+
+p
+{
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight:500;
+
+    color:white;
+    font-size:20px;
+    padding-left:2%;
+}
+
+/*#endregion Texts*/
+
+/*#region Sections*/
+
+body
+{
+    margin: 0%;
+    background: fixed;
+    background-repeat: round;
+    background-image: url(Images/Background.png);
+}
+
+header
+{
+    border-right-color: #ffffff;
+    border-bottom-width: 3%;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+    background-color: #0b0b13;
+
+    height:10%;
+
+    display: grid;
+    grid-template-columns: 20% 16% 16% 16% 16% 16%;
+    grid-template-rows: 100%;
+
+    text-align: center;
+    text-transform:uppercase;
+
+    position: fixed;
+    right:0;
+    left: 0;
+
+    z-index: 1;
+}
+
+footer
+{
+    position:fixed;
+    bottom:15px;
+    right:30px;
+    display: grid;
+    grid-template-columns: 60% 60%;
+}
+
+/*#endregion Sections*/
+
+/*#region Ids (#)*/
+
+#Avatar
+{
+    display:block;
+    margin:auto;
+    border-radius: 100%;
+    border-color: black;
+    background-color: white;
+    max-width:80%;
+    min-width: 50%;
+}
+
+#GameplayVideos
+{
+    padding-top:2%;
+    display : grid;
+    margin:auto;
+    gap:30px;
+    justify-content: center;
+    grid-template-columns : 30% 30% 30%;
+    grid-template-rows : 50% 50%;
+}
+
+#Studios
+{
+    display : grid;
+    margin:auto;
+    padding-top:2%;
+    padding-left:20%;
+    padding-right:20%;
+    align-content: center;
+    align-items:center;
+    justify-content:space-between;
+    justify-items: center;
+    grid-template-columns : 50% 50%;
+}
+
+#Presentation
+{
+    padding-top:15px;
+    padding-left:35px;
+    margin:auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 90%;
+}
+
+#Logiciels
+{
+    display: grid;
+    margin:auto;
+    padding-top: 30px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    justify-self: center;
+    justify-items: center;
+}
+
+/*#endregion Ids (#)*/
+
+/*#region Classes (.)*/
+
+.tab:has(button)
+{
+    display: block;
+    margin:auto;
+    font-weight: 500;
+    align-content: center;
+
+    border-style:solid;
+    border-color:transparent;
+}
+
+.tab:has(h5)
+{
+    border-radius: 5px;
+    font-weight: 500;
+    height:100%;
+    width: 100%;
+    font-size : 40px;
+    align-content: center;
+
+    border-style:solid;
+    border-color:transparent;
+}
+
+.tab:has(h5):hover
+{
+    border-color: #ffffff;
+    font-size : 41px;
+    font-weight: 525;
+    cursor: grab;
+}
+
+.icon
+{
+    max-width : 135px ;
+    max-height : 135px ;
+}
+
+.icon:hover 
+{
+    cursor: grab;
+    animation-duration: 2s;
+    animation-name: ZoomInAndOut;
+    animation-iteration-count: infinite;
+    max-width : 135px ;
+    max-height : 135px ;
+}
+
+.StudioIcons
+{
+    display:block;
+    margin:auto;
+    border-radius: 25%;
+    max-width: 100%;
+    max-height : 100%;
+}
+
+.List
+{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight:500;
+
+    display:block;
+    justify-self: left;
+    padding-top:20px;
+    padding-left:40px;
+    color:white;
+    font-size:20px;
+}
+
+.Logiciel
+{
+    display :block;
+    margin:auto;
+    border-radius: 25%;
+    background-color: white;
+    max-width: 80%;
+}
+
+.Project
+{
+    margin:auto;
+    background-color:black;
+    border-radius: 15px;
+}
+
+/*#endregion Classes (.)*/
+
+/*#region Animations*/
+
+@keyframes ZoomInAndOut
+{
+    0%
+    {
+        max-width : 80% ;
+        max-height : 50% ;
+    }
+
+    50%
+    {
+        max-width : 70% ;
+        max-height : 50% ;
+    }
+
+    100%
+    {
+        max-width : 80% ;
+        max-height : 50% ;
+    }
+}
+
+/*#endregion Animations*/
+
+a
+{
+    text-decoration: none;
+    color : black;
+}
+
+button
+{
+    font-family: "Anton", serif;
+    font-weight:100;
+    font-style: normal;
+
+    display: inline-block;
+    top:25%;
+    position: relative;
+    border-style: solid;
+    border-color: #ffffff;
+    border-radius: 50px;
+    background-color: rgb(17, 17, 18);
+    width:80%;
+    height:50%;
+    color:rgb(255, 255, 255);
+    font-size: 20px
+}
+
+button:hover
+{
+    cursor: grab;
+    animation-name: ZoomInAndOut;
+    animation-duration: 2s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+video
+{
+    transform: scale(1);
+    border-radius: 15px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+video:hover
+{
+    transform: scale(1.02);
+}
