@@ -169,6 +169,7 @@ footer
 
 #Achievements
 {
+    background-color: #282d6c26;
     display:grid;
     margin:auto;
     grid-template-columns: 50% 50%;
