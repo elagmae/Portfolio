@@ -204,6 +204,7 @@ footer
     align-items: center;
     align-content:center;
     align-self: center;
+    row-gap: 20%;
 }
 
 /*#endregion Ids (#)*/
