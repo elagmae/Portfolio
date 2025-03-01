@@ -31,9 +31,9 @@ h3
     font-family: "Anton", serif;
     font-weight: 200;
     font-style: normal;
-    color:#ffffffe4;
     text-align: center;
-    font-size : 25px;
+    font-size : 30px;
+    color: #ffff;
 }
 
 
@@ -51,7 +51,7 @@ h5
     font-family: "Anton", serif;
     font-weight:100;
     font-style: normal;
-    color:#ffffffe4;
+    color: #a4b3ff;
     text-align: center;
     font-size : 25px;
     line-height: 0.3px;
@@ -92,6 +92,10 @@ body
     background: fixed;
     background-repeat: round;
     background-image: url(Images/Background.png);
+    animation-name: SideApparition;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
 
 header
@@ -136,7 +140,9 @@ footer
     display:block;
     margin:auto;
     border-radius: 100%;
-    border-color: black;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 3%;
     background-color: white;
     max-width:80%;
     min-width: 50%;
@@ -157,14 +163,9 @@ footer
 {
     display : grid;
     margin:auto;
-    padding-top:2%;
-    padding-left:20%;
-    padding-right:20%;
-    align-content: center;
     align-items:center;
-    justify-content:space-between;
-    justify-items: center;
     grid-template-columns : 50% 50%;
+    transform: scale(0.5);
 }
 
 #Achievements
@@ -191,13 +192,17 @@ footer
 
 #Logiciels
 {
+    padding-top:5%;
     display: grid;
     margin:auto;
-    padding-top: 30px;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
-    justify-self: center;
     justify-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-content:center;
+    align-self: center;
 }
 
 /*#endregion Ids (#)*/
@@ -288,7 +293,8 @@ footer
     margin:auto;
     border-radius: 25%;
     background-color: white;
-    max-width: 80%;
+    max-width: 40%;
+
 }
 
 .Project
@@ -301,6 +307,19 @@ footer
 /*#endregion Classes (.)*/
 
 /*#region Animations*/
+
+@keyframes SideApparition
+{
+    from
+    {
+        opacity: 0;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
+}
 
 @keyframes ZoomInAndOut
 {
@@ -323,7 +342,9 @@ footer
     }
 }
 
-@keyframes Zoom
+
+
+@keyframes ZoomVideo
 {
     0%
     {
@@ -338,7 +359,7 @@ footer
     }
 }
 
-@keyframes Dezoom
+@keyframes DezoomVideo
 {
     0%
     {
@@ -350,11 +371,27 @@ footer
     {
         max-width : 90% ;
         max-height : 90% ;
+    }
+}
+
+@keyframes DezoomButton
+{
+    0%
+    {
+        max-width : 70% ;
+        max-height : 50% ;
+    }
+
+    100%
+    {
+        max-width : 80% ;
+        max-height : 50% ;
     }
 }
 
 /*#endregion Animations*/
 
+/*#region Items*/
 a
 {
     text-decoration: none;
@@ -389,6 +426,13 @@ button:hover
     animation-iteration-count: infinite;
 }
 
+button:not(:hover)
+{
+    animation-name: DezoomButton ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 video
 {
 
@@ -401,14 +445,15 @@ video
 
 video:hover
 {
-    animation-name: Zoom;
+    animation-name: ZoomVideo;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
 video:not(:hover)
 {
-    animation-name: Dezoom;
+    animation-name: DezoomVideo;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+/*#endregion Items*/
