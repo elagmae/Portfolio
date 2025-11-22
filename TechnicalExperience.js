@@ -10,13 +10,6 @@ class TechnicalExperience extends HTMLElement
             <p class="Exp"> Git </p>
             <p class="Exp"> Unreal </p>
             <p class="Exp"> Illustrator </p>
-
-            <br>
-
-            <p style="display:block;text-align:center;">-</p>
-
-            <br>
-
             <p class="Exp"> C# </p>
             <p class="Exp"> HTML </p>
             <p class="Exp"> CSS </p>

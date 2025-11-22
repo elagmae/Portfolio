@@ -330,6 +330,37 @@ button:hover article
         grid-template-columns: repeat(2, 1fr);
         width:80%;
     }
+
+    button
+    {
+        filter:blur(0px) grayscale(0%);
+    }
+
+    button h2
+    {
+        color:rgb(255, 128, 149);
+    }
+
+    button h3
+    {
+        color:rgb(94, 186, 95);
+    }
+
+    button:hover img:not(.GameLinkImg)
+    {
+        filter:blur(0px) grayscale(0%);
+    }
+
+    button img:not(.GameInfoLogo, .GameLinkImg)
+    {
+        filter:none;
+    }
+
+    #ProfileImg
+    {
+        width:8em;
+        height:8em;
+    }
 }
 
 /*#endregion Mid Screen*/
@@ -338,6 +369,26 @@ button:hover article
 
 @media screen and (max-width: 1220px) 
 {
+    button h2
+    {
+        color:rgb(255, 128, 149);
+    }
+
+    button h3
+    {
+        color:rgb(94, 186, 95);
+    }
+
+    button:hover img:not(.GameLinkImg)
+    {
+        filter:blur(0px) grayscale(0%);
+    }
+
+    button img:not(.GameInfoLogo, .GameLinkImg)
+    {
+        filter:none;
+    }
+
     section
     {
         grid-template-columns: repeat(1, 1fr);
@@ -348,6 +399,28 @@ button:hover article
     {
         padding-left:5em;
         padding-right:5em;
+    }
+ 
+    h1
+    {
+        font-size: 2.2em;
+    }
+
+    h3
+    {
+        font-size: 1.4em;
+    }
+
+    #ProfileImg
+    {
+        width:7em;
+        height:7em;
+    }
+
+    .ContactLogos
+    {
+        width:4em;
+        height:4em;
     }
 }
 
@@ -363,10 +436,57 @@ button:hover article
         width:90%;
     }
 
-        header
+    header
     {
         padding-left:0em;
         padding-right:0em;
+    }
+
+    button
+    {
+        filter:blur(0px) grayscale(0%);
+    }
+
+    h1
+    {
+        font-size: 2em;
+    }
+
+    h3
+    {
+        font-size: 1.2em;
+    }
+
+    button h2
+    {
+        color:rgb(255, 128, 149);
+    }
+
+    button h3
+    {
+        color:rgb(94, 186, 95);
+    }
+
+    button:hover img:not(.GameLinkImg)
+    {
+        filter:blur(0px) grayscale(0%);
+    }
+
+    button img:not(.GameInfoLogo, .GameLinkImg)
+    {
+        filter:none;
+    }
+
+    #ProfileImg
+    {
+        width:5em;
+        height:5em;
+    }
+
+    .ContactLogos
+    {
+        width:3em;
+        height:3em;
     }
 }
 
