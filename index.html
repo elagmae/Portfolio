@@ -1,216 +1,70 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&display=swap');
-    </style>
+
+    <link rel="icon" type="image/x-icon" href="Resources/portfolioIcon.ico">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="GameCard.js"></script>
+    <script src="EducationCard.js"></script>
+    <script src="TechnicalExperience.js"></script>
+    <script src="Contacts.js"></script>
+
+    <script src="index.js"></script>
+
+    <title>POUTHIER Léa - Portfolio</title>
+
 </head>
 
 <body>
 
     <header>
-        <h2> Portfolio </h2>
-        <a href="#PresentationBegin"> <div class = "tab"> <h5> Présentation </h5></div> </a>
-        <a href="#GameplayVideosBegin"> <div class = "tab"> <h5> Projets </h5> </div> </a>
-        <a href="#LogicielsBegin"> <div class = "tab"> <h5> Logiciels </h5></div> </a>
-        <a href="#StudiosBegin"> <div class = "tab"> <h5> Studios </h5></div> </a>
-        <a href="https://lnk.bio/elagmae"> <button class = "tab"> Me contacter ✦ </button></a>
+        <img src="Resources/profil.png" id="ProfileImg">
+
+        <div style="padding: 1em;">
+
+            <h1>Léa POUTHIER</h1>
+            <h3>Game Developer</h3>
+
+        </div>
+
+        <contacts-link></contacts-link>
+
     </header>
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <section>
+        <h1 class="SectionTitle">Projets</h1>
 
-    </div>
+        <game-card group="5" support="Unity (Android)" duration="3 months" name="Musical Magic Arena" role="Game Designer, Game Dev, Tech Artist"></game-card>
+        <game-card group="9" support="Unreal (VR)" duration="1 month" name="Tranch'Orc Apocalypse" role="Game Dev (Environment & Movement)"></game-card>
+        <game-card group="5" support="Unity (Web)" duration="1.5 month" name="Rétro'Lux" role="Game Designer, Game Dev, Tech Artist"></game-card>
+    </section>
 
-    <h1 id = "PresentationBegin"> Présentation </h1>
-    <div id = "Presentation">
+    <a href="https://elagmae.itch.io" style="text-decoration: none;"> <p id="ProjectsButton"> Tous mes projets </p></a>
 
-        <div>
-        <img src = "Images/Avatar.png" id = "Avatar">
-        </div>
+    <section class="SmallSection">
+    <h1 class="SectionTitle">Compétences techniques</h1>
 
-        <div>
-            <p> POUTHIER Léa, étudiante en Game Design (2e année) chez e-artsup Nantes. Associée chez deux studios en cours de création.</p>
-        </div>
+    <technical-exp></technical-exp>
 
-    </div>
+    </section>
 
-    <div id = "#"> </div>
-    <div class = "List">
-        <h4>Compétences</h4>
-        <ul>
-            <li>
-                C#
-            </li>
+    <section class="SmallSection">
+        <h1 class="SectionTitle">Education</h1>
 
-            <br>
+        <education-card EducationName="E-artsup (2023-2026)" Context="Bachelor de Game Design spécialité code."></education-card>
+        <education-card EducationName="Nicolas Appert (2019-2022)" Context="Lycée Général spécialité NSI/Maths/LLCE"></education-card>
 
-            <li>
-                Intégration Unity et Unreal
-            </li>
-
-            <br>
-
-            <li>
-                Blueprint Unreal
-            </li>
-
-            <br>
-
-            <li>
-                Gamefeel
-            </li>
-
-            <br>
-
-            <li>
-                Spécialisation en intégration et gamefeel pour UI
-            </li>
-
-            <br>
-
-            <li>
-                Organisation de productions
-            </li>
-
-        </ul>
-    </div>
-
-    <h1 id = "GameplayVideosBegin"> Projets </h1>
-    <div id = "GameplayVideos">
-
-        <div class = "Project">
-            <h3> Farm Farm Fever </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/FarmFarmFever_Gameplay.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Main Programmer (Group Project) </h5>
-            <h6> trucs que j'ai fais omg</h6>
-        </div>
-
-        <div class = "Project">
-            <h3> Justin Powers </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/JustinPowers_Gameplay.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Game Developper (Solo Project) </h5>
-            <h6> trucs que j'ai fais omg</h6>
-        </div>
-
-        <div class = "Project">
-            <h3> Cauchemar en Maison </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/CauchemarEnMaison_Gameplay.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Gameplay Programmer (Group Project)</h5>
-            <h6> UI Programming + Controller </h6>
-        </div>
-
-        <div class = "Project">
-            <h3> Game Over (VN) </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/GameOver_Narrative.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Game Developper (Solo Project) </h5>
-            <h6> trucs que j'ai fais omg</h6>
-        </div>
-
-        <div class = "Project">
-            <h3> Game Over (Mini-jeu) </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/GameOver_Simon_Gameplay.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Game Developper (Solo Project) </h5>
-            <h6> trucs que j'ai fais omg</h6>
-        </div>
-
-        <div class = "Project">
-            <h3> PlantGame </h3>
-            <video muted="muted" allow="autoplay" loop onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-                <source src="Videos/PlantGame_Gameplay.mp4" type="video/mp4">
-                </source>
-            </video>
-            <h5> Game Developper (Solo Project) </h5>
-            <h6> trucs que j'ai fais omg</h6>
-        </div>
-    </div>
-
-    <h1 id = "LogicielsBegin"> Logiciels </h1>
-
-    <div id = "Logiciels">
-
-        <div>
-            <img src="Images/Unity_Icon.png" class = "Logiciel">
-            <h3> Unity </h3>
-        </div>
-
-        <div>
-            <img src="Images/Unreal_Icon" class = "Logiciel">
-            <h3> Unreal </h3>
-        </div>
-
-        <div>
-            <img src="Images/Illustrator_Icon.png" class = "Logiciel">
-            <h3> Illustrator </h3>
-        </div>
-
-        <div>
-            <img src="Images/Notion_Icon.png" class = "Logiciel">
-            <h3> Notion </h3>
-        </div>
-
-        <div>
-            <img src="Images/Trello_Icon.png" class = "Logiciel">
-            <h3> Trello </h3>
-        </div>
-
-        <div>
-            <img src="Images/GoogleDrive_Icon.png" class = "Logiciel">
-            <h3> Google Drive </h3>
-        </div>
-
-        <div>
-            <img src="Images/Git_Icon.png" class = "Logiciel">
-            <h3> Git </h3>
-        </div>
-
-        <div>
-            <img src="Images/Figma_Icon.png" class = "Logiciel">
-            <h3> Figma </h3>
-        </div>
-
-    </div>
-
-    <h1 id = "StudiosBegin"> Studios </h1>
-    <div id = "Studios">
-
-        <div>
-            <img src="Images/topinambour_icone.png" class = "StudioIcons">
-            <h3> Topinambour Studio </h3>
-        </div>
-
-        <div>
-            <img src="Images/Sunelane_Icon.png" class = "StudioIcons">
-            <h3> Sunelane Studio </h3>
-        </div>
-
-    </div>
+    </section>
 
     <footer>
+
+        <h1>Salut !</h1>
+        <p>...</p>
+
     </footer>
 
 </body>
