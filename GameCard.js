@@ -2,7 +2,6 @@ class GameCard extends HTMLElement
 {
     connectedCallback() 
     {
-        const linkedPage = this.getAttribute("linkedPage") || "";
         const gameGif = this.getAttribute("gif") || "Resources/project1.gif";
         const group = this.getAttribute("group") || "1";
         const support = this.getAttribute("support") || "Unity";
@@ -13,11 +12,11 @@ class GameCard extends HTMLElement
 
         this.innerHTML = 
         `
-            <button type="button" onclick="window.location.href='${linkedPage}'">
+            <button type="button" class="OverlayButton">
 
                 <div class="GameCardContext">
 
-                    <img src=${gameGif}>
+                    <img src=${gameGif} style="overflow:hidden;height:20em;">
 
                     <article> 
                 
@@ -51,6 +50,61 @@ class GameCard extends HTMLElement
 
             </button>
         `;
+
+            this.querySelector(".OverlayButton").addEventListener("click", () => {
+            this.showOverlay(name, role, context, gameGif, group, support, duration); // Appelle la fonction pour afficher l'overlay
+        });
+    }
+
+    showOverlay(name, role, context, gameGif, group, support, duration) {
+        let overlay = document.getElementById("gameOverlay");
+
+        if (!overlay) 
+        {
+            overlay = document.createElement("game-page");
+
+            overlay.id = "gameOverlay";
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.right = "0";
+            overlay.style.bottom = "0";
+            overlay.style.backgroundColor = "rgba(0, 0, 0, 0)";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.opacity = "0";
+            overlay.style.zIndex = "2000";
+            overlay.style.color = "white";
+            document.documentElement.style.overflow = "hidden";
+
+            overlay.style.transition = "opacity 0.5s ease"; // Animation
+
+            overlay.innerHTML = 
+            `
+                <div id="GamePage">
+                
+                    <button id="GamePageClosing">< Retour</button>
+
+                    <h2 style="text-align:center;"> ${name} </h2>
+                    <img src="${gameGif}" id="PageGif">
+
+                </div>
+
+            `;
+            document.body.appendChild(overlay);
+
+            // Ajouter le bouton de fermeture
+            overlay.querySelector("#GamePageClosing").addEventListener("click", () => {
+                overlay.style.opacity = "0";
+                document.documentElement.style.overflow = "";
+                setTimeout(() => overlay.remove(), 500);
+            });
+        }
+
+        // Afficher avec animation
+        requestAnimationFrame(() => {
+            overlay.style.opacity = "1";
+        });
     }
 }
 
