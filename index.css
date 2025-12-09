@@ -93,14 +93,15 @@ button h2
 {
     overflow: hidden;
     color:pink;
-    font-size:1.8em;
+    font-size:168%;
+    letter-spacing: -0.05em;
 }
 
 button h3
 {
     overflow: hidden;
     color:rgb(188, 250, 189);
-    font-size:1.3em;
+    font-size:120%;
 }
 
 article
@@ -171,7 +172,8 @@ h1
 
 h2
 {
-    font-size : 2.2em;
+    font-size : 5%;
+    letter-spacing: -0.05em;
 }
 
 h3
@@ -209,12 +211,11 @@ h5
 #ProfileImg
 {
     display:inline-block;
-
     border-radius: 50%;
 
     padding:-2em;
 
-    width: 9em;
+    width: 8.5em;
     height: 9em;
 }
 
@@ -266,6 +267,12 @@ h5
     margin:1em;
 }
 
+.GameGif
+{
+    overflow: hidden;
+    max-height:20em;
+}
+
 .GameCardInfos
 {
     justify-items: left;
@@ -309,7 +316,6 @@ h5
     width:5em;
     height:5em;
 }
-
 /*#endregion Classes*/
 
 /*#region Animations*/
@@ -388,7 +394,7 @@ button:hover article
 
     #ProfileImg
     {
-        width:8em;
+        width:7.5em;
         height:8em;
     }
 }
@@ -443,7 +449,7 @@ button:hover article
 
     #ProfileImg
     {
-        width:7em;
+        width:6.5em;
         height:7em;
     }
 
@@ -509,7 +515,7 @@ button:hover article
 
     #ProfileImg
     {
-        width:5em;
+        width:4.5em;
         height:5em;
     }
 

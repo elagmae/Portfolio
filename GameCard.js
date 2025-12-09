@@ -16,7 +16,7 @@ class GameCard extends HTMLElement
 
                 <div class="GameCardContext">
 
-                    <img src=${gameGif} style="overflow:hidden;height:20em;">
+                    <img src=${gameGif} class="GameGif">
 
                     <article> 
                 
