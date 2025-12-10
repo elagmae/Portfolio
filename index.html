@@ -77,15 +77,8 @@
     <script type="text/javascript">
 
         var userLang = navigator.language || navigator.userLanguage;
-        if(userLang == "fr-FR")
-        {
-            document.getElementById("FooterTitle").textContent = "Salut !";
-            document.getElementById("FooterText").textContent = "Je suis une jeune développeuse de jeux vidéos vivant à Nantes. J'adore m'occuper de Game Design, de Game Development, de Tech Art, et d'UX-UI en général. J'aime également organiser des productions (notamment sous la forme d'un Game Producer) et aimerai beaucoup vous proposer mes services !";
-            document.getElementById("ProjectTitle").textContent = "Projets";
-            document.getElementById("SkillsTitle").textContent = "Compétences techniques";
-        }
 
-        else
+        if(userLang=="en-US")
         {
             document.getElementById("FooterTitle").textContent = "Hi !";
             document.getElementById("FooterText").textContent = "I am a young video game developer living in Nantes. I love working on game design, game development, tech art, and UX-UI in general. I also enjoy organizing productions (particularly as a game producer) and would love to offer you my services!";
@@ -93,6 +86,14 @@
             document.getElementById("SkillsTitle").textContent = "Technical skills";
             document.getElementById("EartText").getAttribute("Context").textContent = "Bachelor's degree in Game Design with a major in programmation.";
             document.getElementById("HighschoolText").getAttribute("Context").textContent = "General Baccalaureate with specializations in Computer Science/Mathematics/Foreign Languages and Cultures (English)";
+        }
+
+        else (userLang == "fr-FR")
+        {
+            document.getElementById("FooterTitle").textContent = "Salut !";
+            document.getElementById("FooterText").textContent = "Je suis une jeune développeuse de jeux vidéos vivant à Nantes. J'adore m'occuper de Game Design, de Game Development, de Tech Art, et d'UX-UI en général. J'aime également organiser des productions (notamment sous la forme d'un Game Producer) et aimerai beaucoup vous proposer mes services !";
+            document.getElementById("ProjectTitle").textContent = "Projets";
+            document.getElementById("SkillsTitle").textContent = "Compétences techniques";
         }
 
     </script>
