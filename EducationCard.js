@@ -8,8 +8,12 @@ class EducationCard extends HTMLElement
 
         this.innerHTML = 
         `
-            <h3> ${EducationName} </h3>
-            <h5> ${Context} </h5>
+            <div class="EducationContext">
+                <h3> ${EducationName} </h3>
+                <h5> ${Context} </h5>
+            </div>
+
+            <img src="Resources/Arrow.png" class="Arrow">
         `;
     }
 }

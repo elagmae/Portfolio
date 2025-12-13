@@ -1,9 +1,11 @@
-/*#region Big Screen*/
+/*#region Default Screen*/
 
 /*#region Base*/
 
 *
 {
+    scrollbar-width: 1rem;    
+    scrollbar-color: rgb(255, 255, 255) rgb(9, 10, 10);
     font-family: 'Courier New', Courier, monospace;
     color:white;
 
@@ -14,39 +16,40 @@
 
 body
 {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color:white;
 }
 
 header
 {
     display:grid;
-    grid-template-columns: 1fr 3fr 2fr;
+    position:fixed;
+    grid-template-columns: 8em 4.5fr 3fr;
 
-    padding-left:8em;
-    padding-right:8em;
-    padding-top:2em;    
-    padding-bottom:2em;
+    padding-bottom:1rem;
+    padding-top:1rem;
+    padding-left:8rem;
+    padding-right:8rem;
 
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 
     position:fixed;
-    z-index: 1000;
+    z-index: 100;
     top:0;
 
     left: 0;
     right: 0;
 }
 
-section
+section:not(.SmallSection)
 {   
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-gap: 0.8rem;
+    grid-gap: 1.5rem;
 
     padding-top:12rem;
-    padding-bottom: -6rem;
+    padding-bottom: 5rem;
 
     width:90%;
     box-sizing: border-box;
@@ -60,12 +63,12 @@ footer
     bottom: 0;
     background-color:rgb(28, 32, 45);
 
-    padding-left:5em;
-    padding-right:5em;
-    padding-top:5em;    
-    padding-bottom:5em;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top:2%;    
+    padding-bottom:2%;
 
-    margin-top:3em;
+    margin-top:2%;
 }
 
 img, button
@@ -78,12 +81,28 @@ img, button
 
 button img:not(.GameInfoLogo, .GameLinkImg)
 {
+    width:100%;
+    height:100%;
     border-style: hidden;
-    filter:blur(1px) grayscale(70%);
+    filter:blur(0.5px) grayscale(20%);
+}
+
+game-card
+{
+    border-style:solid;
+    border-width:0.1rem;
+    border-color:rgb(153, 91, 102);
+    box-shadow: 0px 0 10px black;
+    transition: transform 0.1s ease-out;
+    transform: translateY(0px);
+    border-radius: 0.1em;
 }
 
 button
 {
+    padding:1rem;
+    width:100%;
+    height:100%;
     background-color: rgb(23, 23, 26);
     border-style:hidden;
     cursor: pointer;
@@ -93,7 +112,8 @@ button h2
 {
     overflow: hidden;
     color:pink;
-    font-size:1.7rem;
+    font-size:1.6rem;
+    font-weight: bolder;
     letter-spacing: -0.1rem;
 }
 
@@ -106,9 +126,11 @@ button h3
 
 article
 {
-    padding-left:1em;
+    display:block;
     position:absolute;
     bottom:0;
+    justify-self: center;
+    padding-left:1rem;
     width:100%;
     background-color: rgba(0, 0, 0, 0.677);
     text-align: left;
@@ -116,30 +138,41 @@ article
 
 education-card
 {
-    display:block;
+    cursor: pointer;
+    display:grid;
     grid-column: span 3 / span 3;
+    grid-template-rows: auto;
     justify-items: center;
+    justify-self: center;
     background-color: rgb(18, 19, 22);
 
-    align-content: center;
-    padding:1em;
+    padding:3rem;
+    padding-bottom:5em;
 
-    width:100%;
+    transition:0.2s ease-out;
+    width:90%;
+
+    border-style: solid;
+    border-width:0.1rem;
+    border-color:rgb(153, 91, 102);
+    border-radius: 0.1em;
 
 }
 
 technical-exp
 {
-    display: block;
-    justify-self: center;
+    cursor: default;
+    padding-left:5rem;
+    padding-right:5rem;
     grid-column: span 3/ span 3;
-    margin:1em;
+    display: inline-block;
+    justify-self: center;
     margin-top:-3em;
 }
 
 contacts-link
 {
-    display: inline-block;
+    display: flex;
 
     text-align: right;
     justify-content: right;
@@ -159,10 +192,14 @@ p
 
 technical-exp .Exp, a p
 {
-    border-color: white;
+    transition:0.2s;
+    color:white;
+    background-color:rgb(18, 19, 22);
+    border-color: rgb(153, 91, 102);
     border-style: solid;
-    border-radius: 0.5em;
-    border-width: 0.1em;
+    border-radius: 0.1em;
+    border-width: 0.07em;
+    font-size:2rem;
 }
 
 h1
@@ -210,13 +247,11 @@ h5
 
 #ProfileImg
 {
-    display:inline-block;
+    transition: 0.2s ease-out;
     border-radius: 50%;
 
-    padding:-2em;
-
-    width: 8.5em;
-    height: 9em;
+    width: 7.5em;
+    height: 8em;
 }
 
 #GamePage
@@ -244,21 +279,67 @@ h5
     height:auto;
 }
 
-#PageGif
+#Contacts
 {
-    overflow: hidden;
-    margin:5em;
-    height:2rem;
-    width:1rem;
+    gap:1rem;
+    display: block;
+    justify-content: end;
+    padding-bottom:1rem;
+    align-items:center;
 }
 
 /*#endregion Ids*/
 
 /*#region Classes*/
 
+.EducationContext
+{
+    position:absolute;
+    display: block;
+    justify-items: center;
+}
+
+.EducationContext h3
+{
+    font-size:2rem;
+    font-weight: bolder;
+}
+
+.EducationContext h5
+{
+    font-weight: lighter;
+    font-size:1.5rem;
+}
+
+.Arrow
+{
+    aspect-ratio: 0.7rem;
+    position: relative;
+    margin-left:100%;
+    margin-top:2rem;
+    width:1.5rem;
+}
+
+.GameGif
+{
+    object-fit: cover;
+    display: block;
+
+    overflow: hidden !important;
+    aspect-ratio: 1.7;
+
+}
+
 .SmallSection
 {
-    margin-top:-10em;
+    display:grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+
+    width:90%;
+
+    justify-self: center;
+    align-content: center;
 }
 
 .SectionTitle
@@ -267,12 +348,6 @@ h5
     grid-column: 1/-1;
 
     margin:1em;
-}
-
-.GameGif
-{
-    overflow: hidden;
-    max-height:20em;
 }
 
 .GameCardInfos
@@ -300,6 +375,7 @@ h5
 {
     position:relative;
     margin:0;
+    padding:0;
 }
 
 .GameInfoLogo
@@ -314,32 +390,85 @@ h5
 .ContactLogos
 {
     display:inline-block;
-    padding:0.2em;
-    width:5em;
-    height:5em;
+    justify-items: center;
+    align-items: center;
+    padding:0.5em;
+
+    transition: 0.2s;
+    width:5rem;
+    height:5rem;
 }
 /*#endregion Classes*/
 
 /*#region Animations*/
 
+technical-exp .Exp:hover, a p
+{
+    background-color: rgb(13, 14, 15);
+    transition:0.2s;
+    border-color:greenyellow;
+    scale:110%;
+}
+
+education-card:hover
+{
+
+    background-color:rgb(13, 14, 15);
+    transition:0.2s ease-out;
+    width:100%;
+    border-style:solid;
+    border-width:0.1rem;
+    border-color:greenyellow;
+    box-shadow: 0px 0 10px black;
+}
+
+#ProfileImg:hover
+{
+    transition: 0.2s ease-out;
+    border-radius: 25%;
+}
+
+.ContactLogos:hover
+{
+    display:inline-block;
+    transition: 0.2s;
+    width:6em;
+    height:6em;
+}
+
 button:hover img:not(.GameLinkImg)
 {
+    transition:0.2s;
     filter:blur(0px) grayscale(0%);
+}
+
+game-card:hover
+{
+    transition:0.2s;
+    border-style:solid;
+    border-width:0.1rem;
+    border-color:greenyellow;
+    transition: transform 0.1s ease-out;
+    transform: translateY(-20px);
+    box-shadow: 0px 0 10px black;
 }
 
 
 button:hover
 {
+    transition:0.2s;
     background-color: rgb(13, 14, 15);
 }
 
 button:hover h2
 {
+    transition:0.2s;
     color:rgb(255, 128, 149);
 }
 
 button:hover h3
 {
+    transition:0.2s;
     color:rgb(94, 186, 95);
 }
 
@@ -357,13 +486,27 @@ button:hover article
 
 /*#endregion Animations*/
 
-/*#endregion Big Screen*/
+/*#endregion Default Screen*/
+
+
 
 /*#region Mid Screen*/
 
 @media screen and (max-width: 1500px) 
 {
-    section
+    .ContactLogos
+    {
+        width:4rem;
+        height:4rem;
+    }
+
+    .ContactLogos:hover
+    {
+        width:5rem;
+        height:5rem;
+    }
+
+    section:not(.SmallSection)
     {
         grid-template-columns: repeat(2, 1fr);
         width:80%;
@@ -393,20 +536,17 @@ button:hover article
     {
         filter:none;
     }
-
-    #ProfileImg
-    {
-        width:7.5em;
-        height:8em;
-    }
 }
 
 /*#endregion Mid Screen*/
 
+
+
 /*#region Small Screen*/
 
-@media screen and (max-width: 1220px) 
+@media screen and (max-width: 1000px) 
 {
+
     button h2
     {
         color:rgb(255, 128, 149);
@@ -427,7 +567,7 @@ button:hover article
         filter:none;
     }
 
-    section
+    section:not(.SmallSection)
     {
         grid-template-columns: repeat(1, 1fr);
         width:70%;
@@ -448,27 +588,17 @@ button:hover article
     {
         font-size: 1.4em;
     }
-
-    #ProfileImg
-    {
-        width:6.5em;
-        height:7em;
-    }
-
-    .ContactLogos
-    {
-        width:4em;
-        height:4em;
-    }
 }
 
 /*#endregion Small Screen*/
+
+
 
 /*#region Mini Screen*/
 
 @media screen and (max-width: 800px) 
 {
-    section
+    section:not(.SmallSection)
     {
         grid-template-columns: repeat(1, 1fr);
         width:90%;
@@ -476,8 +606,8 @@ button:hover article
 
     header
     {
-        padding-left:0em;
-        padding-right:0em;
+        padding-left:1em;
+        padding-right:1em;
     }
 
     button
@@ -514,18 +644,36 @@ button:hover article
     {
         filter:none;
     }
-
-    #ProfileImg
-    {
-        width:4.5em;
-        height:5em;
-    }
-
-    .ContactLogos
-    {
-        width:3em;
-        height:3em;
-    }
 }
 
 /*#endregion Mini Screen*/
+
+
+
+/*#region Giant Screen*/
+
+@media screen and (min-width: 2000px) 
+{
+    section:not(.SmallSection)
+    {
+            grid-template-columns: repeat(4, 1fr);
+            width:90%;
+    }
+}
+
+
+/*#endregion Giant Screen*/
+
+
+
+/*#region Enormous Screen*/
+@media screen and (min-width: 3000px)
+{
+    section:not(.SmallSection)
+    {
+            grid-template-columns: repeat(5, 1fr);
+            width:90%;
+    }
+}
+
+/*#endregion Enormous Screen*/

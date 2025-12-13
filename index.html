@@ -7,6 +7,7 @@
 
     <link rel="icon" type="image/x-icon" href="Resources/portfolioIcon.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="game-page.css">
 
     <script src="GameCard.js"></script>
     <script src="EducationCard.js"></script>
@@ -22,6 +23,7 @@
 <body>
 
     <header>
+
         <img src="Resources/profil.png" id="ProfileImg">
 
         <div style="padding: 1em;">
@@ -41,9 +43,9 @@
         <!-- <game-card group="5" support="Unity (Android)" duration="3 months" name="Musical Magic Arena" role="Game Designer, Game Dev, Tech Artist"></game-card> -->
         <game-card gif="Resources/Gifs/TranchOrc.gif" group="9" support="Unreal (VR)" duration="1 month" name="Tranch'Orc Apocalypse" role="Game Dev (Environment & Movement)"></game-card>
         <game-card gif="Resources/Gifs/Stereogame.gif" group="5" support="Unity (Web)" duration="1.5 months" name="Stereogame" role="Game Design, Game Dev, Tech Artist"></game-card>
-        <game-card gif="Resources/Gifs/FFF.gif" group="5" support="Unity (Windows)" duration="2 months" name="Farm Farm Fever" role="Game/Level Design, Game Dev, Tech Artist"></game-card>
-        <game-card gif="Resources/Gifs/Dufos.gif" group="2" support="Unity (Windows)" duration="1 month" name="Dufos" role="Game Dev, Tech Artist"></game-card>
+        <game-card gif="Resources/Gifs/FFF.gif" group="5" support="Unity (Windows)" duration="2 months" name="Farm Farm Fever" role="Game/Level Design, Game Dev, Tech Artist" context="Projet de fin d’année à e-artsup pour ma première année de Bachelor avec pour thème “Jeu de ferme”." competences="FMOD - Unity - VFX Graph - Particule System - Shadergraph - Game Design - Level Design - Présentation de projets"></game-card>
         <game-card gif="Resources/Gifs/AnEscapeInTheObscurity.gif" group="3" support="Unreal (Windows)" duration="1 month" name="An Escape In The Obscurity" role="Game Design, Game Dev, Tech Artist"></game-card>
+        <game-card gif="Resources/Gifs/Dufos.gif" group="2" support="Unity (Windows)" duration="1 month" name="Dufos" role="Game Dev, Tech Artist"></game-card>
         <game-card gif="Resources/Gifs/JustinPowers.gif" group="1" support="Unity (Windows)" duration="2 weeks" name="Justin Powers" role="Game/Level Design, Game Dev, Tech Artist"></game-card>
 
     </section>
@@ -74,28 +76,27 @@
 
 </body>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        var userLang = navigator.language || navigator.userLanguage;
+    var userLang = navigator.language || navigator.userLanguage;
+    if(userLang == "fr-FR")
+    {
+        document.getElementById("FooterTitle").textContent = "Salut !";
+        document.getElementById("FooterText").textContent = "Je suis une jeune développeuse de jeux vidéos vivant à Nantes. J'adore m'occuper de Game Design, de Game Development, de Tech Art, et d'UX-UI en général. J'aime également organiser des productions (notamment sous la forme d'un Game Producer) et aimerai beaucoup vous proposer mes services !";
+        document.getElementById("ProjectTitle").textContent = "Projets";
+        document.getElementById("SkillsTitle").textContent = "Compétences techniques";
+    }
 
-        if(userLang=="en-US")
-        {
-            document.getElementById("FooterTitle").textContent = "Hi !";
-            document.getElementById("FooterText").textContent = "I am a young video game developer living in Nantes. I love working on game design, game development, tech art, and UX-UI in general. I also enjoy organizing productions (particularly as a game producer) and would love to offer you my services!";
-            document.getElementById("ProjectTitle").textContent = "Projects";
-            document.getElementById("SkillsTitle").textContent = "Technical skills";
-            document.getElementById("EartText").getAttribute("Context").textContent = "Bachelor's degree in Game Design with a major in programmation.";
-            document.getElementById("HighschoolText").getAttribute("Context").textContent = "General Baccalaureate with specializations in Computer Science/Mathematics/Foreign Languages and Cultures (English)";
-        }
+    else
+    {
+        document.getElementById("FooterTitle").textContent = "Hi !";
+        document.getElementById("FooterText").textContent = "I am a young video game developer living in Nantes. I love working on game design, game development, tech art, and UX-UI in general. I also enjoy organizing productions (particularly as a game producer) and would love to offer you my services!";
+        document.getElementById("ProjectTitle").textContent = "Projects";
+        document.getElementById("SkillsTitle").textContent = "Technical skills";
+        document.getElementById("EartText").getAttribute("Context").textContent = "Bachelor's degree in Game Design with a major in programmation.";
+        document.getElementById("HighschoolText").getAttribute("Context").textContent = "General Baccalaureate with specializations in Computer Science/Mathematics/Foreign Languages and Cultures (English)";
+    }
 
-        else (userLang == "fr-FR")
-        {
-            document.getElementById("FooterTitle").textContent = "Salut !";
-            document.getElementById("FooterText").textContent = "Je suis une jeune développeuse de jeux vidéos vivant à Nantes. J'adore m'occuper de Game Design, de Game Development, de Tech Art, et d'UX-UI en général. J'aime également organiser des productions (notamment sous la forme d'un Game Producer) et aimerai beaucoup vous proposer mes services !";
-            document.getElementById("ProjectTitle").textContent = "Projets";
-            document.getElementById("SkillsTitle").textContent = "Compétences techniques";
-        }
-
-    </script>
+</script>
 
 </html>
