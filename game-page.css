@@ -219,6 +219,15 @@
 
 /*#region Big Screen*/
 
+@media screen and (min-width:1700px)
+{
+    #GamePage game-card
+    {
+        scale:100%;
+        margin-top:0%;
+        margin-bottom:0%;
+    }
+}
 
 /*#endregion Big Screen*/
 
