@@ -553,7 +553,8 @@
 
 #RightHeader h1 
 {
-    font-size: 2rem;
+    background-color: red;
+    font-size: 1.8rem;
 }
 
 #Infos
