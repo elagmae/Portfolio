@@ -344,7 +344,7 @@
 
 #LeftContainer
 {
-    border-bottom: 0;
+    border-style: none;
 }
 
 #GamePageClosing p 
@@ -399,7 +399,7 @@
 
 #RightContainer
 {
-    border-top: 0;
+    border-style: none;
 }
 
 #RightHeader
@@ -498,7 +498,7 @@
 
 #LeftContainer
 {
-    border-bottom: 0;
+    border-style: none;
 }
 
 #GamePageClosing p 
