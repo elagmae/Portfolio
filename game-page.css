@@ -1,86 +1,17 @@
-#GamePage game-card
-{
-    pointer-events: none;
-    display: block;
-    justify-self:center;
-    scale:40%;
-    margin:-28%;
-    transform-origin: top center bottom;
-}
+/*#region Default Screen*/
+
+/*#region Base*/
 
 #GamePage
 {
+    box-sizing: border-box;
+
     border-style: solid;
     border-width: 0.1rem;
     border-color:rgb(74, 74, 74);
-
+    margin:2rem;
     display:grid;
     grid-template-columns: 50% 50%;
-}
-
-#CardSection
-{
-    margin:0;
-    padding:0;
-    overflow-y: auto;
-}
-
-#RightHeader h1 
-{
-    color:rgb(255, 128, 149);
-    padding-top:2rem;
-    padding-bottom:1rem;
-    text-align: center;
-    font-size: 3rem;
-    margin-left:1rem;
-    margin-right:1rem;
-}
-
-#Arrow
-{
-
-    width:1rem;
-    height: 1.5rem;
-    padding:0;
-    margin:0;
-}
-
-#GamePageClosing p 
-{
-    padding:0;
-    margin:0;
-    font-size:1.5rem;
-}
-
-#GamePageClosing
-{
-    padding:0;
-    margin:1rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-self: start;
-    align-items: center;
-}
-
-#LeftContainer
-{
-    display: grid;
-    overflow: hidden;
-    box-sizing: border-box;
-    grid-template-rows: auto auto;
-    margin: 0;
-    padding:0;
-
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color:rgb(74, 74, 74);
-}
-
-#RightContainer
-{
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color:rgb(74, 74, 74);
 }
 
 #gameOverlay
@@ -88,6 +19,8 @@
     transition : 0.5s;
     backdrop-filter: blur(6px);
     position:fixed;
+
+    height:100vh;
 
     top:0;
     bottom:0;
@@ -98,38 +31,87 @@
     align-items: center;
 
     z-index: 2000;
-    overflow: hidden;
-
 
     opacity: 0;
     color:white;
     transition : opacity 0.2s ease;
 }
 
-#LinkSection
-{
-    margin-top:0;
-    padding:0;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
+/*#endregion Base*/
 
-    justify-content:center;
-    justify-self: center;
-    align-items: center;
+/*#region Left*/
+
+#LeftContainer
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 0;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color:rgb(74, 74, 74);
 }
 
-#Infos
+#Arrow
 {
-    overflow-y: auto;
-    padding:2rem;
-    gap:1rem;
+
+    width:1.5rem;
+    height: 2rem;
+    padding:0;
+    margin:0;
+}
+
+#GamePageClosing p 
+{
+    padding:0;
+    margin:0;
+    font-size:2rem;
+}
+
+#GamePageClosing
+{
+    padding:1rem;
+    margin:1rem;
     display: grid;
-    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    justify-self: start;
+    align-items: center;
+    gap:1rem;
+}
+
+#CardSection
+{
+    display:block;
+    min-height:0;
+    overflow-y: auto;
+}
+
+#GamePage game-card
+{
+    pointer-events: none;
+    display: block;
+    justify-self:center;
+    scale:70%;
+    margin-top:-10%;
+    margin-bottom:-10%;
+    transform-origin: top center bottom;
+}
+
+#LinkSection
+{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content:center;
 }
 
 .Link
 {
     display: inline-block;
+
 }
 
 .Link p
@@ -138,14 +120,8 @@
     opacity: 0;
     cursor:default;
     display: block;
-    justify-self: center;
-    text-align:center;
-}
 
-#LeftHeader
-{
-    padding:0;
-    margin:0;
+    text-align:center;
 }
 
 .Link img
@@ -153,8 +129,9 @@
     cursor:pointer;
 
     transition:0.2s;
-    scale : 100%;
-    width:40%;
+    margin-top:-40%;
+    scale : 40%;
+    transform-origin: bottom;
 
     display: block;
     justify-self: center;
@@ -169,14 +146,292 @@
 .Link:hover img
 {
     transition:0.2s;
-    scale : 120%;
+    scale : 50%;
+}
+
+/*#endregion Left*/
+
+/*#region Right*/
+
+#RightContainer
+{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 0;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color:rgb(74, 74, 74);
+}
+
+#RightHeader
+{
+    overflow-y: hidden;
+}
+
+#RightHeader h1 
+{
+    color:rgb(255, 128, 149);
+    padding-top:2rem;
+    padding-bottom:1rem;
+    text-align: center;
+    font-size: 4rem;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+#Infos
+{
+    display: block;
+    padding:2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    min-height:0;
+
 }
 
 .Context
 {
     display: block;
-    justify-self: center;
     justify-items: center;
+    padding:3rem;
+}
+
+.Context h2
+{
+    text-align: center;
+    font-size:2.5rem;
+}
+
+.Context p
+{
+    font-size:1.5rem;
+    text-align: center;
+}
+
+/*#endregion Right*/
+
+/*#endregion DefaultScreen*/
+
+/*#region Medium Screen*/
+
+@media screen and (max-width:1400px)
+{
+    #RightHeader h1 
+    {
+        font-size: 3rem;
+    }
+
+    #Infos
+    {
+        padding:4rem;
+    }
+
+    .Context
+    {
+        display: block;
+        justify-items: center;
+        padding:2rem;
+    }
+
+    .Context h2
+    {
+        text-align: center;
+        font-size:2rem;
+    }
+
+    .Context p
+    {
+        font-size:1.5rem;
+        text-align: center;
+    }
+
+    #GamePage game-card
+    {
+        scale:80%;
+        margin-top:0%;
+        margin-bottom:0%;
+    }
+}
+
+/*#endregion Medium Screen*/
+
+/*#region Small Screen*/
+
+@media screen and (max-width:1300px)
+{
+    #Infos
+    {
+        padding:3.5rem;
+    }
+
+    .Context
+    {
+        display: block;
+        justify-items: center;
+        padding:1rem;
+    }
+
+    .Context h2
+    {
+        text-align: center;
+        font-size:1.8rem;
+    }
+
+    .Context p
+    {
+        font-size:1.2rem;
+        text-align: center;
+    }
+
+    .Link img
+    {
+
+        padding-top:1rem;
+        scale:60%;
+    }
+
+    .Link:hover img
+    {
+        scale:70%;
+    }
+}
+
+/*#endregion Small Screen*/
+
+/*#region Mini Screen*/
+
+@media screen and (max-width:875px)
+{
+/*#region Base*/
+
+#GamePage
+{
+    display:block;
+    grid-template-rows: 50% 50% !important;
+}
+
+#gameOverlay
+{
+    transition : 0.5s;
+    backdrop-filter: blur(6px);
+    position:fixed;
+
+    height:100vh;
+
+    top:0;
+    bottom:0;
+    left: 0;
+    right:0;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+
+    opacity: 0;
+    color:white;
+    transition : opacity 0.2s ease;
+}
+
+/*#endregion Base*/
+
+/*#region Left*/
+
+#LeftContainer
+{
+    border-bottom: 0;
+}
+
+#GamePageClosing p 
+{
+    font-size:2rem;
+    color:transparent;
+}
+
+#GamePageClosing
+{
+    z-index: 3000;
+    padding:1rem;
+    margin:1rem;
+}
+
+#GamePage game-card
+{
+    scale:70%;
+    margin-top:2%;
+    margin-bottom:-12%;
+}
+
+#LinkSection
+{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content:center;
+}
+
+.Link img
+{
+    cursor:pointer;
+
+    transition:0.2s;
+    margin-top:-40%;
+    scale : 50%;
+    transform-origin: bottom;
+
+    display: block;
+    justify-self: center;
+}
+
+.Link:hover img
+{
+    transition:0.2s;
+    scale : 60%;
+}
+
+/*#endregion Left*/
+
+/*#region Right*/
+
+#RightContainer
+{
+    border-top: 0;
+}
+
+#RightHeader
+{
+    position:absolute;
+    top:0;
+    padding-left:3rem;
+    padding-right:3rem;
+    justify-self: center;
+    overflow-y: hidden;
+}
+
+#RightHeader h1 
+{
+    color:rgb(255, 128, 149);
+    padding-top:2rem;
+    padding-bottom:1rem;
+    text-align: center;
+    font-size: 3rem;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+
+#Infos
+{
+    display: block;
+    box-sizing: border-box;
+    overflow-y: auto;
+    min-height:0;
+    margin-top:-10%;
+}
+
+.Context
+{
+    display: block;
+    justify-items: center;
+    padding:1rem;
 }
 
 .Context h2
@@ -187,6 +442,12 @@
 
 .Context p
 {
-    font-size:1rem;
+    font-size:1.2rem;
     text-align: center;
 }
+
+/*#endregion Right*/
+
+}
+
+/*#endregion Mini Screen*/

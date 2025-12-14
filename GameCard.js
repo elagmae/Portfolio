@@ -78,7 +78,7 @@ class GameCard extends HTMLElement
 
                         <button id="GamePageClosing">
                             <img src="Resources/Arrow.png" style="rotate:180deg;" id="Arrow">
-                            <p> Retour </p>
+                            <p> RETOUR </p>
                         </button>
                         
                     </div>
@@ -90,17 +90,17 @@ class GameCard extends HTMLElement
                         <div id="LinkSection">
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/ItchioLogo.png"> </a>
+                                <a href=""> <img src="Resources/BuildIcon.png"> </a>
                                 <p> Build </p>
                             </div>
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/ItchioLogo.png"> </a>
+                                <a href=""> <img src="Resources/DevlogIcon.png"> </a>
                                 <p> Devlogs </p>
                             </div>
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/ItchioLogo.png"> </a>
+                                <a href=""> <img src="Resources/YoutubeIcon.png"> </a>
                                 <p> Vidéo </p>
                             </div>
 
