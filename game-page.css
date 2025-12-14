@@ -101,6 +101,11 @@
     transform-origin: top center bottom;
 }
 
+#GamePage game-card button .GameCardInfos .GameLink img
+{
+    visibility: hidden;
+}
+
 #LinkSection
 {
     display: grid;
@@ -459,7 +464,7 @@
 
 /*#region UltraMini Screen*/
 
-@media screen and (max-width:600px)
+@media screen and (max-width:475px)
 {
 /*#region Base*/
 
@@ -501,6 +506,12 @@
     border-style: none;
 }
 
+#Arrow
+{
+    width:1rem;
+    height:1.5rem;
+}
+
 #GamePageClosing p 
 {
     font-size:2rem;
@@ -517,8 +528,13 @@
 #GamePage game-card
 {
     scale:70%;
-    margin-top:2%;
-    margin-bottom:-12%;
+    margin-top:0%;
+    margin-bottom:-10%;
+}
+
+#GamePage game-card button article
+{
+    visibility: hidden;
 }
 
 #LinkSection
@@ -553,18 +569,15 @@
 
 #RightHeader h1 
 {
-    background-color: red;
     font-size: 1.8rem;
+    padding-right:0rem;
+    padding-left:0rem;
 }
 
 #Infos
 {
-    margin-top:-15%;
-}
-
-.Context
-{
-    padding:1rem;
+    margin-top:-5%;
+    padding:0;
 }
 
 .Context h2

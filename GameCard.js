@@ -8,10 +8,16 @@ class GameCard extends HTMLElement
         const group = this.getAttribute("group") || "1";
         const support = this.getAttribute("support") || "Unity";
         const duration = this.getAttribute("duration") || "1 week";
+
         const name = this.getAttribute("name") || "Name";
         const role = this.getAttribute("role") || "Rôle";
+
         const context = this.getAttribute("context") || "...";
         const competences = this.getAttribute("competences") || "...";
+
+        const video = this.getAttribute("video") || "";
+        const build = this.getAttribute("build") || "";
+        const devlog = this.getAttribute("devlog") || "";
 
         this.innerHTML = 
         `
@@ -55,13 +61,13 @@ class GameCard extends HTMLElement
         `;
 
             this.querySelector(".OverlayButton").addEventListener("click", () => {
-            this.showOverlay(name, role, context, gameGif, group, support, duration, competences); // Appelle la fonction pour afficher l'overlay
+            this.showOverlay(name, role, context, gameGif, group, support, duration, competences, video, build, devlog); // Appelle la fonction pour afficher l'overlay
         });
     }
 
 //#endregion GameCard
 
-    showOverlay(name, role, context, gameGif, group, support, duration, comp) {
+    showOverlay(name, role, context, gameGif, group, support, duration, comp, video, build, devlog) {
         let overlay = document.getElementById("gameOverlay");
 
         if (!overlay) 
@@ -90,17 +96,17 @@ class GameCard extends HTMLElement
                         <div id="LinkSection">
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/BuildIcon.png"> </a>
+                                <a href="${build}"> <img src="Resources/BuildIcon.png"> </a>
                                 <p> Build </p>
                             </div>
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/DevlogIcon.png"> </a>
+                                <a href="${devlog}"> <img src="Resources/DevlogIcon.png"> </a>
                                 <p> Devlogs </p>
                             </div>
 
                             <div class="Link">
-                                <a href=""> <img src="Resources/YoutubeIcon.png"> </a>
+                                <a href="${video}"> <img src="Resources/YoutubeIcon.png"> </a>
                                 <p> Vidéo </p>
                             </div>
 
