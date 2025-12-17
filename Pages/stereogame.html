@@ -5,14 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="stereogame.css">
+    <link rel="stylesheet" href="../Styles/page.css">
     <title>Stereogame</title>
 
 </head>
 
 <body>
    
+    <header>
 
+        <a href="../index.html" id="Return"><img src="../Resources/Sources/Arrow.png"> </a>
+        
+        <div id="Profile">
+            <h1> POUTHIER Léa </h1>
+            <h3> Junior Game Developer</h3>
+        </div>
+
+        <div id="Contacts">
+            <a href="https://github.com/elagmae" class="ContactLinks"><img src="../Resources/Sources/GithubLogo.png" style="filter: brightness(0) invert(1);"></a>
+            <a href="https://www.linkedin.com/in/elagmae" class="ContactLinks"><img src="../Resources/Sources/LinkedinLogo.png"></a>
+            <a href="https://elagmae.itch.io" class="ContactLinks"><img src="../Resources/Sources/ItchioLogo.png" style="filter: brightness(0) invert(1);"></a>
+            <a id="CV" href="../Resources/PouthierLéa_CV.pdf"> <img style="border-radius:5rem;" src="../Resources/Sources/profil.png" class="ContactLogos"> </a>     
+        </div>
+
+    </header>
+
+    <main>
+
+        <article>
+
+            <div id="ProjectVisual">
+                <h2> STEREOGAME </h2>
+                <img src="../Resources/Gifs/Stereogame.gif">
+            </div>
+
+            <section id="Infos">
+
+                <h2> Concept </h2>
+
+                <p>
+                    Jeu web multi-platform en 2D pixel-art ou le joueur incarne un régisseur 
+                    de scène de Stereolux, qui doit trouver des tableaux comportants les infos
+                    de l'évènement à promouvoir. Il se joue sur 7 niveaux, pour chacun des
+                    jours de l'évènement. Pour rendre le tout plus intéressant, il est également
+                    possible de récupérer quelques easter eggs...
+                </p>
+
+                <h2> Pourquoi ? </h2>
+
+                <p>
+                    Ce projet était une mission professionnelle accordée par Stereolux. 
+                    Avec cette mission, moi et mon équipe avions l'objectif de promouvoir leur évènement 
+                    Stereogame de manière simple, facile d'accès et surtout extrêmement casual, pour que 
+                    n'importe qui puisse y jouer et apprécier un univers correspondant à Stereolux.
+                </p>
+
+                <h2> Mon travail </h2>
+
+                <p>
+                    Durant ce projet, j'ai notamment pu créer un concept de jeu que j'ai 
+                    proposé à mon équipe, qu'on a ensuite peaufiner ensemble en utilisant nos
+                    compétences acquises en Game Design. J'ai pu aussi intégrer nos 
+                    différents sons et musiques grâce à l'outil FMOD, créer différents effets
+                    visuels (avec notamment des particules systems, l'utilisation du plugin 
+                    Dotween, et certaines animations créent par les artistes de mon équipe). 
+                    J'ai également pu découvrir le support web multi-platform d'Unity, et 
+                    coder le jeu final en très grande partie. J'ai pu ainsi découvrir 
+                    comment utiliser des inputs multi-platform pour que le joueur puisse 
+                    interagir avec son écran, notamment grâce à un déplacement calqué sur 
+                    la position de l'input du joueur, mais aussi grâce à un moyen de 
+                    naviguer entre les différentes scènes à base de boutons. J'ai aussi 
+                    pu toucher à quelques morceaux d'un système de sauvegarde basique 
+                    d'abord crée par Lyta Mahjoub.
+                </p>
+
+                <h2> Comment ? </h2>
+
+                <h4> FMOD </h4>
+
+                <p>
+                    En utilisant cet outil, j'ai pu récupérer les musiques et SFXs de ma camarade et
+                    les utiliser grâce au code (notamment avec des Event References et Emitters), 
+                    en utilisant un design pattern de singleton, me permettant de 
+                    changer de musique entre chaque scène si je le désire. L'utilisation de
+                    ce script est simple : il suffit de relier chaque scène à sa musique
+                    dans une liste de l'inspecteur du singleton, qui changera automatiquement sa
+                    musique actuelle si cette dernière est différente.
+                </p>
+
+                <section class="Code Grid">
+                    <img class="CodeImg" src="../Resources/Code/Stereogame/FMOD.png">
+                </section>
+
+                <h4> Web multi-platform </h4>
+
+                <p>
+                    J'ai pu découvrir le support web de Unity, et ai décidé de prendre en compte les inputs 
+                    du joueur selon un paramètre très simple : le type d'appareil du joueur.
+                    En effet, le touché sur mobile et la position de la souris sur PC n'est 
+                    pas pris en compte de la même façon. C'est pour ça qu'en utilisant 
+                    "Application.isMobilePlatform", j'ai pu prendre en compte les bonnes actions.
+                </p>
+
+                <section class="Code Grid">
+                    <img class="CodeImg" src="../Resources/Code/Stereogame/Inputs.png">
+                </section>
+
+            </section>
+
+        </article>
+    
+    </main>
 
 </body>
 </html>

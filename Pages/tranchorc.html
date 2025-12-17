@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../Styles/page.css">
+    <title>Tranch'Orc Apocalypse</title>
+
+</head>
+
+<body>
+   
+    <header>
+
+        <a href="../index.html" id="Return"><img src="../Resources/Sources/Arrow.png"> </a>
+        
+        <div id="Profile">
+            <h1> POUTHIER Léa </h1>
+            <h3> Junior Game Developer</h3>
+        </div>
+
+        <div id="Contacts">
+            <a href="https://github.com/elagmae" class="ContactLinks"><img src="../Resources/Sources/GithubLogo.png" style="filter: brightness(0) invert(1);"></a>
+            <a href="https://www.linkedin.com/in/elagmae" class="ContactLinks"><img src="../Resources/Sources/LinkedinLogo.png"></a>
+            <a href="https://elagmae.itch.io" class="ContactLinks"><img src="../Resources/Sources/ItchioLogo.png" style="filter: brightness(0) invert(1);"></a>
+            <a id="CV" href="../Resources/PouthierLéa_CV.pdf"> <img style="border-radius:5rem;" src="../Resources/Sources/profil.png" class="ContactLogos"> </a>     
+        </div>
+
+    </header>
+
+    <main>
+
+        <article>
+
+            <div id="ProjectVisual">
+                <h2> TRANCH'ORC APOCALYPSE </h2>
+                <img src="../Resources/Gifs/TranchOrc.gif">
+            </div>
+
+            <section id="Infos">
+
+                <h2> Concept </h2>
+                <p>
+                    Jeu "Rail Brawler" 3D dans un désert à l’univers Diesel Punk, qui mélange gore et humour. Le joueur surfe sur son bouclier à travers les dunes et affronte des hordes d’orcs surfeurs dans une course-poursuite intense. C’est un véritable défouloir dans lequel le joueur pourra découper tout ce qui passe en travers de sa route.
+                </p>
+
+                <h2> Pourquoi ? </h2>
+
+                <p>
+                    Ce projet a été produit dans un contexte scolaire, pour expérimenter Unreal et le support VR, que nous ne connaissions quasiment pas. La taille de l'équipe nous a permis de nous challenger sur ces aspects.
+                </p>
+
+                <h2> Mon travail </h2>
+
+                <p>
+                J'ai pu apprendre de nombreuses choses durant ce projet, notamment sur Unreal. 
+                J'ai pu découvrir l'utilisation des navmeshs dynamiques (car oui, le sol était 
+                généré en pleine partie, donc impossible de bake des navmeshs dessus), ce qui 
+                m'a permis de mettre en place le mouvement des Orcs ennemis, sans qu'ils se 
+                bloquent sur du décor. Pour éviter une trop forte motion sickness, nous avions 
+                aussi décider de faire en sorte que le décor se crée seul de manière randomisée
+                en avançant vers le joueur plutôt que l'inverse, tout en faisant spawner les 
+                ennemis dessus de manière random également : c'est moi qui me suit chargée de 
+                cette tâche, notamment en faisant spawner des prefabs possédant chacun en plus 
+                une variable permettant d'altérer le random selon le niveau de difficulté 
+                voulu (utile pour permettre une rejouabilité avec une difficulté croissante).
+                J'ai pu également crée le feedback visuel de dégâts du joueur, me permettant 
+                de tester la VR et d'apprendre comment on peut produire des effets fullscreen 
+                avec un casque de ce support.
+                </p>
+
+                <h2> Comment ? </h2>
+
+                <h4> Navmeshs dynamiques </h4>
+
+                <p>
+                    Pour permettre aux orcs de se déplacer en évitant les collisions de 
+                    l'environnement, j'ai du réfléchir à comment utiliser les navmeshs 
+                    sur du terrain en constante évolution. En me questionnant sur le sujet, 
+                    j'ai pu expérimenter avec certaines cases du composant, notamment celles qui 
+                    permettent d'updater les navmeshs en realtime, ce qu'on pourrait appeler 
+                    "des navmeshs dynamiques". On peut voir ici les calculs en temps réel :
+                </p>
+
+                <section class="Code Grid">
+                    <img class="CodeImg" src="../Resources/Code/Tranchorc/DynamicNavmesh.gif">
+                </section>
+
+                <h4> Génération de terrain </h4>
+
+                <p>
+                    Pour générer du terrain en continu, j'ai du créer un actor qui m'a permis 
+                    de spawner des prefabs modifiables choisis au préalable, selon leur taille
+                    pour éviter des overlaps. Pour garder un jeu assez optimisé (le support
+                    étant la VR), j'ai également mis en place un fog permettant aux objets d'être
+                    créés et détruit assez près de la caméra, devant et derrière le joueur.
+                </p>
+
+            </section>
+
+        </article>
+    
+    </main>
+
+</body>
+</html>

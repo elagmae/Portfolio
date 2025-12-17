@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="../Resources/Sources/portfolioIcon.ico">
+    <link rel="stylesheet" href="../Styles/index.css">
+    <link rel="stylesheet" href="../Styles/game-page.css">
+
+    <script src="../Scripts/GameCard.js"></script>
+    <script src="../Scripts/EducationCard.js"></script>
+    <script src="../Scripts/TechnicalExperience.js"></script>
+    <script src="../Scripts/Contacts.js"></script>
+
+    <title>POUTHIER Léa - Portfolio</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <img src="../Resources/Sources/profil.png" id="ProfileImg">
+
+        <div style="padding: 1em;">
+
+            <h1>Léa POUTHIER</h1>
+            <h3>Junior Game Developer</h3>
+
+        </div>
+
+        <contacts-link> </contacts-link>
+
+    </header>
+
+    <section>
+        <h1 class="SectionTitle" id="ProjectTitle">Projets</h1>
+
+        <game-card 
+            build="https://nantoor.itch.io/tranchorc-apocalypse" 
+            video="https://www.youtube.com/watch?v=q1TGWAkAMQ0&list=PLZJ3MYIbaGate-ljvgNmgffiq3mtuy1EO&index=11" 
+            gif="../Resources/Gifs/TranchOrc.gif" 
+            group="9" 
+            support="Unreal (VR)" 
+            duration="1 month" 
+            name="Tranch'Orc Apocalypse" 
+            role="Game Dev (Environment & Movement)"
+            link = "../Pages/tranchorc.html">
+        </game-card>
+
+        <game-card 
+            build="https://elagmae.itch.io/stereogame" 
+            video = "https://elagmae.itch.io/stereogame" 
+            gif="../Resources/Gifs/Stereogame.gif" 
+            group="5" support="Unity (Web)" 
+            duration="1.5 months" 
+            name="Stereogame" 
+            role="Game Design, Game Dev, Tech Artist"
+            link="../Pages/stereogame.html">
+        </game-card>
+
+        <game-card 
+            build="https://s4pph1r3.itch.io/farm-farm-fever-demo" 
+            video="https://www.youtube.com/watch?v=TPHgWPj8X38&list=PLZJ3MYIbaGate-ljvgNmgffiq3mtuy1EO&index=1" 
+            gif="../Resources/Gifs/FFF.gif" 
+            group="5" 
+            support="Unity (Windows)" 
+            duration="2 months" 
+            name="Farm Farm Fever" 
+            role="Game/Level Design, Game Dev, Tech Artist" 
+            link="../Pages/fff.html">
+        </game-card>
+
+        <game-card 
+            build="https://dadaiste.itch.io/an-escape-in-the-obscurity" 
+            video="https://youtu.be/4vIze0gMInc" 
+            gif="../Resources/Gifs/AnEscapeInTheObscurity.gif" 
+            group="3" 
+            support="Unreal (Windows)" 
+            duration="1 month" 
+            name="An Escape In The Obscurity" 
+            role="Game Design, Game Dev, Tech Artist"
+            link="../Pages/anEscapeInTheObscurity.html">
+        </game-card>
+
+        <game-card 
+            build="https://elagmae.itch.io/dufos" 
+            video="https://youtu.be/9pBefV3DPto" 
+            gif="../Resources/Gifs/Dufos.gif" 
+            group="2" 
+            support="Unity (Windows)" 
+            duration="1 month" 
+            name="Dufos" 
+            role="Game Dev, Tech Artist"
+            link="../Pages/dufos.html">
+        </game-card>
+
+        <game-card 
+            build="https://elagmae.itch.io/justin-powers" 
+            video="https://youtu.be/lJnMWQnQJaI" 
+            gif="../Resources/Gifs/JustinPowers.gif" 
+            group="1" 
+            support="Unity (Windows)" 
+            duration="2 weeks" 
+            name="Justin Powers" 
+            role="Game/Level Design, Game Dev, Tech Artist"
+            link="../Pages/justinPowers.html">
+        </game-card>
+
+    </section>
+
+    <section class="SmallSection">
+    <h1 class="SectionTitle" id="SkillsTitle">Compétences techniques</h1>
+
+    <technical-exp></technical-exp>
+
+    </section>
+
+    <section class="SmallSection">
+        <h1 class="SectionTitle">Education</h1>
+
+        <education-card 
+            id="EartText" 
+            EducationName="E-artsup (2023-2026)" 
+            Context="Bachelor de Game Design spécialité code.">
+        </education-card>
+
+        <education-card 
+            id="HighschoolText" 
+            EducationName="Nicolas Appert (2019-2022)" 
+            Context="Bac Général spécialités NSI/Maths/LLCE">
+        </education-card>
+
+    </section>
+
+    <footer>
+
+        <h1 id="FooterTitle">Salut !</h1>
+        <p id="FooterText">Je suis une jeune développeuse de jeux vidéos vivant à Nantes. J'utilise comme moteurs Unity comme Unreal, et aimerai beaucoup vous proposer mes services !</p>
+
+    </footer>
+
+</body>
+
+</html>

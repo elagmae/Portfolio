@@ -5,7 +5,7 @@
 *
 {
     scrollbar-width: 1rem;    
-    scrollbar-color: rgb(255, 255, 255) rgb(9, 10, 10);
+    scrollbar-color: rgb(255, 255, 255) #080815;
     font-family: 'Courier New', Courier, monospace;
     color:white;
 
@@ -16,7 +16,7 @@
 
 body
 {
-    background-color: rgb(0, 0, 0);
+    background-color: #080910;
     color:white;
 }
 
@@ -31,7 +31,7 @@ header
     padding-left:8rem;
     padding-right:8rem;
 
-    background-color: rgb(0, 0, 0);
+    background-color:#06070a;
 
     position:fixed;
     z-index: 100;
@@ -139,15 +139,17 @@ article
 education-card
 {
     cursor: pointer;
-    display:grid;
+    display:block;
     grid-column: span 3 / span 3;
     grid-template-rows: auto;
     justify-items: center;
     justify-self: center;
     background-color: rgb(18, 19, 22);
 
-    padding:3rem;
-    padding-bottom:5em;
+    padding-top:3rem;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:0;
 
     transition:0.2s ease-out;
     width:90%;
@@ -241,6 +243,14 @@ h5
 
 /*#region Ids*/
 
+#CV p
+{
+    text-align: center;
+    font-size:1.5rem;
+    margin-right: auto;
+    padding-right:auto;
+}
+
 #ProjectsButton
 {
     display: block;
@@ -299,7 +309,6 @@ h5
 
 .EducationContext
 {
-    position:absolute;
     display: block;
     justify-items: center;
 }
@@ -323,6 +332,7 @@ h5
     margin-left:100%;
     margin-top:2rem;
     width:1.5rem;
+    visibility: collapse;
 }
 
 .GameGif

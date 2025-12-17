@@ -1,0 +1,173 @@
+:root 
+{
+  --header-height: 8rem;
+  --page-width:80%;
+}
+
+*
+{
+    scrollbar-width: 2rem;
+    scrollbar-color: rgb(255, 255, 255) rgb(9, 10, 10);
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+
+    margin:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #080910;
+    color:white;
+}
+
+header
+{
+    position:fixed;
+    display: grid;
+    grid-template-columns: 4rem auto auto;
+    z-index: 100;
+
+    padding-left:4rem;
+    padding-right:4rem;
+    width:100%;
+    height: var(--header-height);
+    justify-items: center;
+    align-items: center;
+    justify-self: center;
+
+    background-color: #06070a;
+}
+
+#Return img
+{
+    rotate: 180deg;
+    margin:2rem;
+    height:2rem;
+    width:2rem;
+}
+
+header img
+{
+    margin:1rem;
+    height:4rem;
+    width:4rem;
+}
+
+header #Profile
+{
+    padding:1rem;
+    display: block;
+    justify-self: start;
+}
+
+header #Contacts
+{
+    padding:1rem;
+    display: block;
+    justify-self: end;
+}
+
+main
+{
+    width:var(--page-width);
+    justify-self: center;
+    padding-top: var(--header-height);
+}
+
+article
+{
+    padding-top: 2rem;
+}
+
+#ProjectVisual
+{
+    position:relative;
+    display: block;
+    justify-self: center;
+}
+
+#ProjectVisual img
+{
+    border-style: solid;
+    border-width: 1px;
+}
+
+#ProjectVisual h2
+{
+    position: relative;
+    top:2rem;
+    width:70%;
+    padding:2rem;
+
+    display: block;
+    justify-self: center;
+    align-content: center;
+
+
+    z-index: 2;
+    background-color: rgb(10, 10, 20);
+    text-align: center;
+
+    border-style: solid;
+    border-width: 1px;
+}
+
+#Infos
+{
+    padding-top: 2rem;
+}
+
+#Infos h2, h4, p
+{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.CodeGrid
+{
+    display: grid;
+    grid-template-columns: auto;
+    justify-self: center;
+}
+
+.CodeImg
+{
+    display: block;
+    justify-self: center;
+    margin:2rem;
+    width:60%;
+
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/*#region Fonts*/
+
+h1
+{
+    font-size: 2.5rem;
+}
+
+h2
+{
+    font-size: 2rem;
+}
+
+h3
+{
+    font-size: 1.5rem;
+}
+
+h4
+{
+    font-size: 1.3rem;
+}
+
+p
+{
+    font-size:1.1rem;
+}
+
+/*#endregion Fonts*/

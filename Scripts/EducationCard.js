@@ -13,7 +13,7 @@ class EducationCard extends HTMLElement
                 <h5> ${Context} </h5>
             </div>
 
-            <img src="Resources/Arrow.png" class="Arrow">
+            <img src="../Resources/Sources/Arrow.png" class="Arrow">
         `;
     }
 }
