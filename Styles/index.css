@@ -159,7 +159,7 @@ education-card
 
 }
 
-technical-exp
+technical-exp:not(.ButtonLink)
 {
     cursor: default;
     padding-left:5rem;
@@ -190,7 +190,7 @@ p
     padding-left:0.3em;
 }
 
-technical-exp .Exp, a p
+technical-exp .Exp, a:not(.ButtonLink) p
 {
     transition:0.2s;
     color:white;
@@ -230,6 +230,11 @@ h5
 
     margin-bottom:1em;
     font-size: 1.1em;
+}
+
+.ButtonLink p, a
+{
+    text-decoration: none !important;
 }
 
 /*#endregion Base*/
@@ -402,7 +407,7 @@ h5
 
 /*#region Animations*/
 
-technical-exp .Exp:hover, a p
+technical-exp .Exp:hover, a:not(.ButtonLink) p
 {
     background-color: rgb(13, 14, 15);
     transition:0.2s;

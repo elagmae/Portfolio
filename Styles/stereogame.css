@@ -1,0 +1,17 @@
+*
+{
+    scrollbar-width: 1rem;    
+    scrollbar-color: rgb(255, 255, 255) rgb(9, 10, 10);
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+
+    margin:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body
+{
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
