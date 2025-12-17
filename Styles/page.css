@@ -124,7 +124,7 @@ article
     padding-bottom: 1rem;
 }
 
-.CodeGrid
+section .CodeGrid
 {
     display: grid;
     grid-template-columns: auto;
@@ -136,7 +136,7 @@ article
     display: block;
     justify-self: center;
     margin:2rem;
-    width:60%;
+    width:50%;
 
     border-style: solid;
     border-width: 1px;
