@@ -100,16 +100,6 @@ class GameCard extends HTMLElement
                                 <p> Build </p>
                             </div>
 
-                            <div class="Link">
-                                <a href="${devlog}"> <img src="Resources/DevlogIcon.png"> </a>
-                                <p> Devlogs </p>
-                            </div>
-
-                            <div class="Link">
-                                <a href="${video}"> <img src="Resources/YoutubeIcon.png"> </a>
-                                <p> Vidéo </p>
-                            </div>
-
                         </div>
 
                     </div>
