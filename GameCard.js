@@ -128,7 +128,7 @@ class GameCard extends HTMLElement
                         </div>
 
                         <div class="Context">
-                            <h2> Compétences travaillées </h2>
+                            <h2> Travail apporté </h2>
                             <p>${comp}</p>
                         </div>
 
