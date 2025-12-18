@@ -44,23 +44,46 @@
                 <h2> Concept </h2>
 
                 <p>
-
+                    Platformer 2D à un niveau qui permet au joueur de manier différents super-pouvoirs
+                    dans l'objectif de franchir les obstacles sur sa route jusqu'au drapeau final.
                 </p>
 
                 <h2> Pourquoi ? </h2>
 
                 <p>
-
+                    Thème obligatoire (projet étudiant), le but était ici d'apprendre à utiliser
+                    certains design patterns et de gérer la propreté de notre code pour produire
+                    un jeu optimisé.
                 </p>
 
                 <h2> Mon travail </h2>
 
                 <p>
-
+                    C'était un projet solo, outre les graphismes provenant d'itch.io, j'ai tout
+                    fait moi-même : éléments de juice, implémentation des designs patterns, UX,
+                    LD, GD, et optimisation.
                 </p>
 
                 <h2> Comment ? </h2>
 
+                <h4> Pattern Subclass Sandbox </h4>
+
+                <p>
+                    Pour implémenter mes super-pouvoirs, j'ai remarqué un comportement similaires 
+                    pour tous, et surtout une utilisation des composants identiques. Pour éviter
+                    de la réécriture de code, j'ai préféré utiliser ce design pattern, qui m'a
+                    permis de résoudre le problème en utilisant une base commune pour tous les
+                    pouvoirs, à laquelle je peux ajouter des modifications par pouvoir ensuite.
+                </p>
+
+                <h4> Optimisation </h4>
+
+                <p>
+                    Pour éviter des problèmes de visuels et FPS, j'ai décidé de désactiver
+                    mes comportements ennemis (attaques etc.) lorsqu'ils ne sont pas à l'écran.
+                    J'ai également implémenter une Object Pool, me permettant de ne pas recréer 
+                    d'objets déjà existants inutilisés, en réactivant les anciens.
+                </p>
 
             </section>
 
