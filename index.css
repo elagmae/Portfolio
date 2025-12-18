@@ -417,7 +417,7 @@ h5
 
 /*#region Animations*/
 
-technical-exp .Exp:hover, a:not(.ButtonLink) p
+technical-exp .Exp:hover, a:not(.ButtonLink)
 {
     background-color: rgb(13, 14, 15);
     transition:0.2s;
