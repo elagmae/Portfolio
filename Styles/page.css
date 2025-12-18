@@ -127,7 +127,7 @@ article
 section .CodeGrid
 {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
     justify-self: center;
 }
 
@@ -136,7 +136,7 @@ section .CodeGrid
     display: block;
     justify-self: center;
     margin:2rem;
-    width:50%;
+    width:70%;
 
     border-style: solid;
     border-width: 1px;
