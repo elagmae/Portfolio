@@ -49,46 +49,60 @@
                 <h2> Pourquoi ? </h2>
 
                 <p>
-                    Ce projet a été produit dans un contexte scolaire, pour expérimenter Unreal et le support VR, que nous ne connaissions quasiment pas. La taille de l'équipe nous a permis de nous challenger sur ces aspects.
+                    Ce projet a été produit dans un contexte scolaire, pour expérimenter Unreal et le support VR, que je ne connaissais quasi pas. La taille de l'équipe m'a permis de prendre certains risques.
                 </p>
 
                 <h2> Mon travail </h2>
 
-                <p> 
-                    J'ai pu découvrir l'utilisation des navmeshs dynamiques avec le mouvement des 
-                    Orcs ennemis, sans qu'ils se bloquent sur du décor. Pour éviter une trop forte 
-                    motion sickness, j'ai programmer un décor qui se crée seul de manière randomisée 
-                    en avançant vers le joueur plutôt que l'inverse. J'ai pu également crée le 
-                    feedback visuel de dégâts du joueur, me permettant de tester la VR et les 
-                    effets fullscreen avec un casque de ce support.
-                </p>
+                <ul>
+                    <li>Création d'un système de génération de terrain.</li>
+                    <li>Navmeshs dynamiques pour le mouvement des Orcs pour qu'ils ne collisionnent pas avec l'environnement.</li>
+                    <li>Feedback visuel de dégâts sur le casque VR en fullscreen.</li>
+                    <li>Mise en place des armures ennemies et de leur mouvement en cas d'impact.</li>
+                </ul>
 
                 <h2> Comment ? </h2>
 
                 <h4> Navmeshs dynamiques </h4>
 
-                <p>
-                    Pour permettre aux orcs de se déplacer en évitant les collisions de 
-                    l'environnement, j'ai du réfléchir à comment utiliser les navmeshs 
-                    sur du terrain en constante évolution. En me questionnant sur le sujet, 
-                    j'ai pu expérimenter avec certaines cases du composant, notamment celles qui 
-                    permettent d'updater les navmeshs en realtime, ce qu'on pourrait appeler 
-                    "des navmeshs dynamiques". On peut voir ici les calculs en temps réel :
-                </p>
+                <ul>
+                    <li>Utilisation des navmeshs de base pour prendre en compte les collisions.</li>
+                    <li>Modification des paramètres prenant en compte le realtime.</li>
+                    <li>Implémentation du mouvement avec les nodes de déplacement IA utilisant des navmeshs.</li>
+                </ul>
 
                 <section class="CodeGrid">
-                    <img class="CodeImg" src="../Resources/Code/Tranchorc/DynamicNavmesh.gif">
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Tranchorc/DynamicNavmesh.gif">
+                        <p class="CodeText">Calculs en temps réel des navmeshs</p>
+                    </div>
                 </section>
 
                 <h4> Génération de terrain </h4>
 
-                <p>
-                    Pour générer du terrain en continu, j'ai du créer un actor qui m'a permis 
-                    de spawner des prefabs modifiables choisis au préalable, selon leur taille
-                    pour éviter des overlaps. Pour garder un jeu assez optimisé (le support
-                    étant la VR), j'ai également mis en place un fog permettant aux objets d'être
-                    créés et détruit assez près de la caméra, devant et derrière le joueur.
-                </p>
+                <ul>
+                    <li>Création d'un actor qui fait spawner des prefabs randomisés.</li>
+                    <li>Espacement des prefabs par rapport à leur taille et une variable d'espacement.</li>
+                    <li>Optimisation de l'apparition avec un fog et une distance minime.</li>
+                </ul>
+
+                <h4> Armures des Orcs </h4>
+
+                <ul>
+                    <li> Placement random dans un dictionnaire qui permet de relier les socket aux meshs des armures.
+                </ul>
+
+                <section class="CodeGrid">
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Tranchorc/Armure.gif">
+                        <p class="CodeText">Armure sur le mesh</p>
+                    </div>
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Tranchorc/armure.png">
+                        <p class="CodeText">Mise en place en blueprint</p>
+                    </div>
+                </section>
 
             </section>
 

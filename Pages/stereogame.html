@@ -62,48 +62,61 @@
 
                 <h2> Mon travail </h2>
 
-                <p>
-                    Durant ce projet, j'ai crée un concept de jeu que j'ai 
-                    proposé à mon équipe, qu'on a ensuite peaufiné ensemble. J'ai pu aussi intégrer 
-                    nos différents sons grâce à FMOD, créer différents effets
-                    visuels (particules systems, Dotween, et certaines animations créent 
-                    par nos artistes). J'ai également pu découvrir le support web 
-                    multi-platform d'Unity, et coder le jeu final. J'ai pu 
-                    ainsi découvrir comment utiliser des inputs multi-platform pour que le joueur 
-                    puisse interagir avec son écran grâce à un déplacement calqué sur 
-                    la position de l'input du joueur.
-                </p>
+                <ul>
+                    <li>Création du concept.</li>
+                    <li>Intégration des sons et code d'un Audio Manager avec FMOD</li>
+                    <li>Création d'effets visuelles avec Dotween, les Particules Systems, et le code d'animations sur ou sans assets.</li>
+                    <li>Utilisation du support web multi-platform pour les inputs du joueur.</li>
+                </ul>
 
                 <h2> Comment ? </h2>
 
                 <h4> FMOD </h4>
 
-                <p>
-                    En utilisant cet outil, j'ai pu récupérer les musiques et SFXs de ma camarade et
-                    les utiliser grâce au code (notamment avec des Event References et Emitters), 
-                    en utilisant un design pattern de singleton, me permettant de 
-                    changer de musique entre chaque scène si je le désire. L'utilisation de
-                    ce script est simple : il suffit de relier chaque scène à sa musique
-                    dans une liste de l'inspecteur du singleton, qui changera automatiquement sa
-                    musique actuelle si cette dernière est différente.
-                </p>
+                <ul>
+                    <li>Récupération des sons avec FMOD en code (Event Reference/Emitter).</li>
+                    <li>Utilisation d'un singleton pour associer chaque scène à sa musique et en faire un système de changement de musique.</li>
+                </ul>
 
                 <section class="CodeGrid">
-                    <img class="CodeImg" src="../Resources/Code/Stereogame/FMOD.png">
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Stereogame/FMOD.png">
+                        <p class="CodeText">Système de changement de musique</p>
+                    </div>
                 </section>
 
                 <h4> Web multi-platform </h4>
 
-                <p>
-                    J'ai pu découvrir le support web de Unity, et ai décidé de prendre en compte les inputs 
-                    du joueur selon un paramètre très simple : le type d'appareil du joueur.
-                    En effet, le touché sur mobile et la position de la souris sur PC n'est 
-                    pas pris en compte de la même façon. C'est pour ça qu'en utilisant 
-                    "Application.isMobilePlatform", j'ai pu prendre en compte les bonnes actions.
-                </p>
+                <ul>
+                    <li>Data contenu dans Application qui a permis de savoir quel support le joueur utilise en jeu.</li>
+                    <li>Utilisation de l'info pour changer la méthode d'input.</li>
+                    <li>Utilisation de la position de la souris/du touché retranscrit(e) dans un évènement pour le PC/mobile.</li>
+                </ul>
 
                 <section class="CodeGrid">
-                    <img class="CodeImg" src="../Resources/Code/Stereogame/Inputs.png">
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Stereogame/Inputs.png">
+                        <p class="CodeText">Système qui gère les inputs du joueur pour son déplacement</p>
+                    </div>
+                </section>
+
+                <h4> Feedbacks globaux </h4>
+
+                <ul>
+                    <li>Utilisation de Dotween pour les séquences enchaînés.</li>
+                    <li>Utilisation d'animators pour utiliser les assets des artistes avec plus de dynamisme.</li>
+                </ul>
+
+                <section class="CodeGrid">
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/Stereogame/avant_juice.gif">
+                        <p class="CodeText">Avant juice</p>
+                    </div>
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Gifs/Stereogame.gif">
+                        <p class="CodeText">Après juice</p>
+                    </div>
                 </section>
 
             </section>

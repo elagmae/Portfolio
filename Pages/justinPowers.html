@@ -51,8 +51,8 @@
                 <h2> Pourquoi ? </h2>
 
                 <p>
-                    Thème obligatoire (projet étudiant), le but était ici d'apprendre à utiliser
-                    certains design patterns et de gérer la propreté de notre code pour produire
+                    Thème obligatoire (projet étudiant), le but était d'apprendre à utiliser
+                    des design patterns et de gérer la propreté de notre code pour produire
                     un jeu optimisé.
                 </p>
 
@@ -68,22 +68,31 @@
 
                 <h4> Pattern Subclass Sandbox </h4>
 
-                <p>
-                    Pour implémenter mes super-pouvoirs, j'ai remarqué un comportement similaires 
-                    pour tous, et surtout une utilisation des composants identiques. Pour éviter
-                    de la réécriture de code, j'ai préféré utiliser ce design pattern, qui m'a
-                    permis de résoudre le problème en utilisant une base commune pour tous les
-                    pouvoirs, à laquelle je peux ajouter des modifications par pouvoir ensuite.
-                </p>
+                <ul>
+                    <li>Héritage avec une classe abstraite qui gère la fonctionnalité du super-pouvoir</li>
+                    <li>Lien avec les composants utilisés et les feedbacks (sons, visuels...).</li>
+                </ul>
 
                 <h4> Optimisation </h4>
 
-                <p>
-                    Pour éviter des problèmes de visuels et FPS, j'ai décidé de désactiver
-                    mes comportements ennemis (attaques etc.) lorsqu'ils ne sont pas à l'écran.
-                    J'ai également implémenter une Object Pool, me permettant de ne pas recréer 
-                    d'objets déjà existants inutilisés, en réactivant les anciens.
-                </p>
+                <ul>
+                    <li>Désactivation des comportements ennemis non visibles à l'écran.</li>
+                    <li>Implémentation d'une Object Pool pour les projectiles ennemis.</li>
+                </ul>
+
+                <section class="CodeGrid">
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/JustinPowers/subclass.png">
+                        <p class="CodeText">Base du pattern Subclass Sandbox</p>
+                    </div>
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/JustinPowers/objectPool.png">
+                        <p class="CodeText">Base du pattern Object Pool</p>
+                    </div>
+
+                </section>
 
             </section>
 

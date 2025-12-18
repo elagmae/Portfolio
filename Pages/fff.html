@@ -54,71 +54,96 @@
 
                 <p>
                    Ce projet est mon premier projet de fin d'année et avait pour thème "jeu de ferme original".
-                   Pour rendre le principe de fermier original, j'ai décidé de le mixer avec de la musique.
-                   Le concept a été apprécié par mes professeur mais m'a également permis d'apprendre à créer un
-                   jeu de rythme assez tôt dans mon cursus, ce qui était un challenge pour notre équipe (personne 
-                   ne connaissais FMOD, et nos professeur n'en avait quasi aucune connaissance forte non plus).
+                   Pour casser le côté cyclique répétitif d'un jeu de ferme, j'ai décider d'en faire un jeu de rythme.
                 </p>
 
                 <h2> Mon travail </h2>
-        
-                <p>
-                    Premièrement, j'ai pu créer un concept seule. Le concept à ensuite pu être choisi 
-                    par mes camarades, afin que l'on puisse tous ensemble lui apporter
-                    en clarté et originalité. J'ai pu ensuite découvrir comment développer un jeu 
-                    de rythme, qui était un challenge de première année d'étude J'ai pu alors découvrir FMOD 
-                    (pas de manière conventionnelle) notamment en créant un level design 
-                    musical. J'ai donc aussi pu programmer l'UI dynamique de notre jeu, et créer certains layouts de 
-                    panels de jeu. Enfin, j'ai pu coder solo une grande partie du projet après avoir réussi à relier 
-                    mes évènements au code rythmé d'FMOD avec l'aide de Lyta Mahjoub.
-                </p>
+
+                <ul>
+                    <li>Création du concept.</li>
+                    <li>Développement du jeu de rythme : challenge technique pour mon expérience d'à peine un an.</li>
+                    <li>Création de la moitié du Level Design.</li>
+                    <li>Programmation de l'UI dynamique.</li>
+                    <li>Création de certains layouts du jeu (Panel d'informations).</li>
+                </ul>
 
                 <h2> Comment ? </h2>
 
                 <h4> FMOD </h4>
 
-                <p>
-                    J'ai pu apprendre à utiliser FMOD sous différentes formes, notamment en code 
-                    avec différents marqueurs liés à des events qui font ensuite spawner nos 
-                    légumes. J'ai surtout pu utiliser cet outil pour créer un Level Design, en
-                    plaçant justement les dits marqueurs. Ma camarade gérant la musique m'a également
-                    fourni un script qui permet de gérer les écart de click (pour que je puisse
-                    créer plus tard un système de "Perfect, Great, Too early, Miss") en ajoutant des
-                    marqueurs à un certains intervalles de ceux déjà placés. Voici à quoi ressemble
-                    un level design dans FMOD : 
-                </p>
+                <ul>
+                    <li>Utilisation d'FMOD non-conventionnelle pour créer un Level Design avec des marqueurs.</li>
+                    <li>Level Design retranscrit en évènements codés qui font spawn les légumes.</li>
+                </ul>
 
                 <section class="CodeGrid">
+                    <div>
                     <img class="CodeImg" src="../Resources/Code/FFF/FMOD.png">
+                    <p class="CodeText">Level Design FMOd</p>
+                    </div>
                 </section>
 
                 <h4> UI Programming </h4>
 
-                <p>
-                    J'ai pu découvrir avec ce travail le principe de changement de caméra, ou j'ai du utiliser 
-                    quatres caméras différentes sur quatres environnements
-                    différents afin de présenter chaque saison, et les bloquer selon le niveau actuel du 
-                    joueur avec du post process. J'ai aussi pu découvrir Dotween, notamment sur
-                    le menu des scores de fin de niveau. Pour créer une ambiance dynamique à souhait, j'ai
-                    pu créer de nouveaux effets visuels en Particle System, et même certains shaders, utilisés
-                    chacun les uns à la suite des autres pour créer un effet "mini cinématique".
-                </p>
+                <h5> Changement de caméra</h5>
+
+                <ul>
+                    <li>Changement de caméra pour découvrir différents environnements par panel.</li>
+                    <li>Feedbacks associés au changement pour dynamiser la scène avec des animations codées et du post-process.</li>
+                </ul>
+
+                <div>
+                    <img class="CodeImg" src="../Resources/Code/FFF/fff_menu.gif">
+                    <p class="CodeText" style="text-align: center;">Menu Dynamique</p>
+                </div>
+
+                <h5> Juice par rapport au score </h5>
+                
+                <p> Pour créer un effet "mini cinématique" avec des actions enchaînées : </p>
+
+                <ul>
+                    <li>Utilisation de Dotween pour les animations codées des écrans.</li>
+                    <li>Utilisation des Particules Systems et de shaders.</li>
+                </ul>
 
                 <section class="CodeGrid">
 
                     <div>
-                        <img class="CodeImg" src="../Resources/Code/FFF/fff_menu.gif">
-                        <p style="text-align: center;">Menu Dynamique</p>
+                        <img class="CodeImg" src="../Resources/Code/FFF/fff_score_v1.gif">
+                        <p class="CodeText">Menu Score avant Juice</p>
                     </div>
 
                     <div>
-                        <img class="CodeImg" src="../Resources/Code/FFF/fff_score_v1.gif">
-                        <p style="text-align: center;">Menu Score avant Juice</p>
+                        <img class="CodeImg" src="../Resources/Code/FFF/fff_score_mid.gif">
+                        <p class="CodeText">Menu Score </p>
                     </div>
 
                     <div>
                         <img class="CodeImg" src="../Resources/Code/FFF/fff_score.gif">
-                        <p style="text-align: center;">Menu Score Variante Parfaite </p>
+                        <p class="CodeText">Menu Score Variante Parfaite </p>
+                    </div>
+
+                </section>
+
+                <h5> Juice global </h5>
+
+                <ul>
+                    <li>Particule Systems intégrés en UI grâce à un système de layering.</li>
+                    <li>Shaders utilisés pour complexifier certaines particules, mais aussi pour créer des trails personnalisées.</li>
+                    <li>Variation selon le taux de réussite du joueur (au niveau des couleurs et de la force des feedbacks).</li>
+                    <li>Animations codées avec Dotween, notamment pour la danse du décor.</li>
+                </ul>
+
+                <section class="CodeGrid">
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Code/FFF/game_prejuice.gif">
+                        <p class="CodeText">Menu Score avant Juice</p>
+                    </div>
+
+                    <div>
+                        <img class="CodeImg" src="../Resources/Gifs/FFF.gif">
+                        <p class="CodeText">Menu Score </p>
                     </div>
 
                 </section>

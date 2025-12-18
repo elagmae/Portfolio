@@ -301,6 +301,13 @@ h5
     justify-content: end;
     padding-bottom:1rem;
     align-items:center;
+    background-color: transparent;
+}
+
+#Contacts a
+{
+    color:transparent;
+    background-color: transparent;
 }
 
 /*#endregion Ids*/
@@ -404,6 +411,7 @@ h5
 
 .ContactLogos
 {
+    background-color: transparent;
     display:inline-block;
     justify-items: center;
     align-items: center;
@@ -445,6 +453,7 @@ education-card:hover
 
 .ContactLogos:hover
 {
+    background-color: transparent;
     display:inline-block;
     transition: 0.2s;
     width:6em;
@@ -494,7 +503,8 @@ button:hover article
     animation-fill-mode: forwards;  
 }
 
-@keyframes Disparition {
+@keyframes Disparition 
+{
     from{opacity: 1;}
     to{opacity: 0;}
 }
