@@ -25,13 +25,13 @@ class GameCard extends HTMLElement
 
                     <article> 
                 
-                        <img src="../Resources/Sources/GroupIcon.png" class="GameInfoLogo" style="filter:invert(1);">
+                        <img src="Resources/Sources/GroupIcon.png" class="GameInfoLogo" style="filter:invert(1);">
                         <p> ${group} </p>
 
-                        <img src="../Resources/Sources/TimeIcon.png" class="GameInfoLogo" style="filter:invert(1);">
+                        <img src="Resources/Sources/TimeIcon.png" class="GameInfoLogo" style="filter:invert(1);">
                         <p> ${duration} </p>
 
-                        <img src="../Resources/Sources/SettingsIcon.png" class="GameInfoLogo" style="filter:invert(1);">
+                        <img src="Resources/Sources/SettingsIcon.png" class="GameInfoLogo" style="filter:invert(1);">
                         <p> ${support} </p>
 
 
@@ -44,7 +44,7 @@ class GameCard extends HTMLElement
                     <div class = "GameLink"> 
 
                         <h2>${name}</h2>
-                        <img src="../Resources/Sources/Arrow.png" class="GameLinkImg">
+                        <img src="Resources/Sources/Arrow.png" class="GameLinkImg">
 
                     </div>
 
