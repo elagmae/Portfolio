@@ -112,7 +112,6 @@ article
     justify-self: center;
     align-content: center;
 
-
     z-index: 2;
     background-color: rgb(10, 10, 20);
     text-align: center;
@@ -135,16 +134,17 @@ article
 section .CodeGrid
 {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     justify-self: center;
+    padding:0;
 }
 
 .CodeImg
 {
     display: block;
     justify-self: center;
-    margin:2rem;
-    width:70%;
+    margin:1rem;
+    height:15rem;
 
     border-style: solid;
     border-width: 1px;
