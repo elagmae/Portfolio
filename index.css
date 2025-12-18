@@ -192,7 +192,7 @@ p
     padding-left:0.3em;
 }
 
-technical-exp .Exp, a:not(.ButtonLink) p:not(.ButtonLink)
+technical-exp .Exp
 {
     transition:0.2s;
     color:white;
