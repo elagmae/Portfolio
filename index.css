@@ -23,14 +23,10 @@ body
 
 #Table
 {
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: 2%;
-    padding-bottom:1%;
-    padding-top:1%;
-    padding-left:1%;
-    padding-right: 2%;
+    display:flex;
+    flex-direction:row;
     grid-gap:25px;
+    padding:10px;
 
     z-index: 2000;
     justify-self : center;
@@ -45,16 +41,12 @@ body
 
 #Table a
 {
-    box-sizing: border-box;
-    display: block;
-    padding: 2px;
-    width:150px;
-    height:30px;
-
     border-style: solid;
     border-color:rgb(153, 91, 102);
     border-width: 1px;
     border-radius: 30px;
+    width:130px;
+    height:30px;
 
     text-align: center;
     align-content: center;
@@ -80,14 +72,15 @@ header
     position:fixed;
     flex-flow: row;
 
-    padding-bottom:1rem;
-    padding-top:1rem;
-    padding-left:5rem;
-    padding-right:5rem;
+    align-items: center;
+    justify-self : center;
+    padding:1rem 2rem 1rem 2rem;
 
     background-color:#06070a;
     z-index: 100;
     top:0;
+
+    width:100%;
 
     left: 0;
     right: 0;
@@ -225,10 +218,7 @@ technical-exp:not(.ButtonLink)
 
 contacts-link
 {
-    display: flex;
-
-    text-align: right;
-    justify-content: right;
+    margin-left:auto;
 }
 
 p
@@ -453,9 +443,10 @@ h5
 
 .ContactLogos
 {
+    display:inline-flex;
+    flex:content;
+    flex-direction: column;
     background-color: transparent;
-    display:inline-block;
-    padding:0.2rem;
 
     transition: 0.2s;
     width:4rem;
@@ -558,16 +549,22 @@ button:hover article
 
 @media screen and (max-width: 1500px) 
 {
+
     .ContactLogos
     {
-        width:4rem;
-        height:4rem;
+        width:3.25rem;
+        height:3.25rem;
     }
 
-    .ContactLogos:hover
+    #ProfileImg
     {
-        width:5rem;
-        height:5rem;
+        transform: scale(85%);
+    }
+
+    #Table a 
+    {
+        width:110px;
+        font-size: 0.8rem;
     }
 
     section:not(.SmallSection)
@@ -600,6 +597,16 @@ button:hover article
     {
         filter:none;
     }
+
+    h1
+    {
+        font-size: 2rem;
+    }
+
+    h3
+    {
+        font-size: 1rem;
+    }
 }
 
 /*#endregion Mid Screen*/
@@ -608,8 +615,20 @@ button:hover article
 
 /*#region Small Screen*/
 
-@media screen and (max-width: 1000px) 
+@media screen and (max-width: 1205px) 
 {
+
+    #ProfileImg
+    {
+        transform: scale(70%);
+    }
+
+
+    #Table
+    {
+        visibility: hidden;
+        width: 0%;
+    }
 
     button h2
     {
@@ -630,42 +649,50 @@ button:hover article
     {
         filter:none;
     }
-
-    section:not(.SmallSection)
-    {
-        grid-template-columns: repeat(1, 1fr);
-        width:70%;
-    }
-
-    header
-    {
-        padding-left:5em;
-        padding-right:5em;
-    }
  
     h1
     {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     h3
     {
-        font-size: 1.4em;
+        font-size: 1.1em;
+    }
+
+    article
+    {
+        font-size: 0.6rem;
     }
 }
 
 /*#endregion Small Screen*/
 
-
-
 /*#region Mini Screen*/
 
-@media screen and (max-width: 800px) 
+@media screen and (max-width: 850px) 
 {
+    .ContactLogos
+    {
+        width:2.5rem;
+        height:2.5rem;
+    }
+
+    h1
+    {
+        font-size: 2rem;
+    }
+
+    h3
+    {
+        font-size: 1rem;
+    }
+
     section:not(.SmallSection)
     {
         grid-template-columns: repeat(1, 1fr);
-        width:90%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     header
@@ -677,16 +704,6 @@ button:hover article
     button
     {
         filter:blur(0px) grayscale(0%);
-    }
-
-    h1
-    {
-        font-size: 2em;
-    }
-
-    h3
-    {
-        font-size: 1.2em;
     }
 
     button h2
@@ -712,7 +729,13 @@ button:hover article
 
 /*#endregion Mini Screen*/
 
+/*#region Mobile Big*/
+@media screen and (max-width: 590px) 
+{
 
+}
+
+/*#endregion Mobile Big */
 
 /*#region Giant Screen*/
 
@@ -720,8 +743,8 @@ button:hover article
 {
     section:not(.SmallSection)
     {
-            grid-template-columns: repeat(4, 1fr);
-            width:90%;
+        grid-template-columns: repeat(4, 1fr);
+        width:90%;
     }
 }
 
