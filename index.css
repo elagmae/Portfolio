@@ -4,8 +4,9 @@
 
 *
 {
-    scrollbar-width: 1rem;    
-    scrollbar-color: rgb(255, 255, 255) #080815;
+    scroll-behavior: smooth;
+    scrollbar-width: 2rem;    
+    scrollbar-color: #e76592 #271f39;
     font-family: 'Courier New', Courier, monospace;
     color:white;
 
@@ -17,23 +18,74 @@
 body
 {
     background-color: #080910;
-    color:white;
+    color:rgb(255, 255, 255);
+}
+
+#Table
+{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 2%;
+    padding-bottom:1%;
+    padding-top:1%;
+    padding-left:1%;
+    padding-right: 2%;
+    grid-gap:25px;
+
+    z-index: 2000;
+    justify-self : center;
+    justify-content: center;
+    justify-items: center;
+
+    background-color: #0000003a;
+    align-content: center;
+
+    border-radius: 30px;
+}
+
+#Table a
+{
+    box-sizing: border-box;
+    display: block;
+    padding: 2px;
+    width:150px;
+    height:30px;
+
+    border-style: solid;
+    border-color:rgb(153, 91, 102);
+    border-width: 1px;
+    border-radius: 30px;
+
+    text-align: center;
+    align-content: center;
+}
+
+#Table a:hover
+{
+    transition: 0.1s;
+    border-color: yellowgreen;
+    transform:translateY(5px);
+    border-width: 1.5px;
+}
+
+@keyframes move-horizontal-reverse
+{
+    from { background-position: 1280px 0; }
+    to { background-position: 0 0; }
 }
 
 header
 {
-    display:grid;
+    display:inline-flex;
     position:fixed;
-    grid-template-columns: 8em 4.5fr 3fr;
+    flex-flow: row;
 
     padding-bottom:1rem;
     padding-top:1rem;
-    padding-left:8rem;
-    padding-right:8rem;
+    padding-left:5rem;
+    padding-right:5rem;
 
     background-color:#06070a;
-
-    position:fixed;
     z-index: 100;
     top:0;
 
@@ -75,7 +127,6 @@ img, button
 {
     position:relative;
     display: block;
-    width: 100%;
     top:0;
 }
 
@@ -206,18 +257,18 @@ technical-exp .Exp
 
 h1
 {
-    font-size:3em;
+    font-size:2.7em;
 }
 
 h2
 {
-    font-size : 5%;
+    font-size : 2.4;
     letter-spacing: -0.05em;
 }
 
 h3
 {
-    font-size : 1.8em;
+    font-size : 1.5em;
     text-align: left;
 }
 
@@ -264,9 +315,10 @@ h5
 {
     transition: 0.2s ease-out;
     border-radius: 50%;
+    flex:none;
 
-    width: 7.5em;
-    height: 8em;
+    width: 5.5em;
+    height: 6em;
 }
 
 #GamePage
@@ -292,16 +344,6 @@ h5
 
     width: auto;
     height:auto;
-}
-
-#Contacts
-{
-    gap:1rem;
-    display: block;
-    justify-content: end;
-    padding-bottom:1rem;
-    align-items:center;
-    background-color: transparent;
 }
 
 #Contacts a
@@ -413,13 +455,11 @@ h5
 {
     background-color: transparent;
     display:inline-block;
-    justify-items: center;
-    align-items: center;
-    padding:0.5em;
+    padding:0.2rem;
 
     transition: 0.2s;
-    width:5rem;
-    height:5rem;
+    width:4rem;
+    height:4rem;
 }
 /*#endregion Classes*/
 
@@ -455,9 +495,8 @@ education-card:hover
 {
     background-color: transparent;
     display:inline-block;
-    transition: 0.2s;
-    width:6em;
-    height:6em;
+    transition: 0.15s;
+    transform: scale(115%);
 }
 
 button:hover img:not(.GameLinkImg)
