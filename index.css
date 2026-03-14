@@ -61,12 +61,6 @@ body
     border-width: 1.5px;
 }
 
-@keyframes move-horizontal-reverse
-{
-    from { background-position: 1280px 0; }
-    to { background-position: 0 0; }
-}
-
 header 
 {
     display: flex;

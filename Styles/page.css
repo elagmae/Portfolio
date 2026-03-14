@@ -21,23 +21,48 @@ body
     color:white;
 }
 
-header
+header 
 {
-    position:fixed;
-    display: grid;
-    grid-template-columns: 4rem auto auto;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-size: 1400px 175px;
+    height: 175px;
+    align-items:flex-start;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #06070a;
     z-index: 100;
 
-    padding-left:4rem;
-    padding-right:4rem;
-    width:100%;
-    height: var(--header-height);
-    justify-items: center;
-    align-items: center;
-    justify-self: center;
+    background-repeat: repeat-x;
+    background-size: cover;
 
-    background-color: #06070a;
+    -webkit-mask-image: url('../Resources/Sources/wave.png');
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-size: 1400px 175px;
+
+    mask-image: url('../Resources/Sources/wave.png');
+    mask-repeat: repeat-x;
+    mask-position: 0 0;
+    mask-size: 1400px 175px;
+
+    animation: wave-seamless 8s linear infinite;
 }
+
+@keyframes wave-seamless {
+    from 
+    {
+        -webkit-mask-position: 0 0 ;
+        mask-position: 0 0 ;
+    }
+
+    to 
+    {
+        -webkit-mask-position:  -1400px 0;
+        mask-position: -1400px 0;
+    }
+}
+
 
 #Return img
 {
@@ -50,7 +75,7 @@ header
 header img
 {
     transition: 0.2s;
-    margin:1rem;
+    margin:0.1rem;
     height:4rem;
     width:4rem;
 }
@@ -64,17 +89,17 @@ header #Profile
 
 header #Contacts
 {
-    padding:1rem;
+    transition:0.2s;
     display: block;
     justify-self: end;
+    padding-top: 1rem;
 
 }
 
 header img:hover
 {
     transition: 0.2s;
-    width:5rem;
-    height:5rem;
+    transform: scale(110%);
 }
 
 main
