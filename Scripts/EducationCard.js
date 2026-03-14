@@ -12,8 +12,6 @@ class EducationCard extends HTMLElement
                 <h3> ${EducationName} </h3>
                 <h5> ${Context} </h5>
             </div>
-
-            <img src="Resources/Sources/Arrow.png" class="Arrow">
         `;
     }
 }

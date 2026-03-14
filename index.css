@@ -140,6 +140,7 @@ game-card
     transition: transform 0.1s ease-out;
     transform: translateY(0px);
     border-radius: 0.1em;
+    justify-self: center;
 }
 
 button
@@ -170,13 +171,16 @@ button h3
 
 article
 {
+    background-color: rgba(0, 0, 0, 0.677);
+
     display:block;
     position:absolute;
-    bottom:0;
     justify-self: center;
+
     padding-left:1rem;
+    bottom:0;
     width:100%;
-    background-color: rgba(0, 0, 0, 0.677);
+
     text-align: left;
 }
 
@@ -435,6 +439,8 @@ h5
 .GameInfoLogo
 {
     display: inline-block;
+    align-content: center;
+    justify-content: center;
     margin-top:1.6em;
     margin-bottom:1.6em;
     width:1em;
@@ -550,10 +556,25 @@ button:hover article
 @media screen and (max-width: 1500px) 
 {
 
+    education-card
+    {
+        display: block;
+        padding:0;
+        margin:0;
+        height:8rem;
+        align-content: center;
+    }
+
     .ContactLogos
     {
         width:3.25rem;
         height:3.25rem;
+    }
+
+    .GameInfoLogo
+    {
+        width:1em;
+        height:1em;
     }
 
     #ProfileImg
@@ -570,7 +591,6 @@ button:hover article
     section:not(.SmallSection)
     {
         grid-template-columns: repeat(2, 1fr);
-        width:80%;
     }
 
     button
@@ -580,11 +600,13 @@ button:hover article
 
     button h2
     {
+        font-size: 1.7rem;
         color:rgb(255, 128, 149);
     }
 
     button h3
     {
+        font-size:1rem;
         color:rgb(94, 186, 95);
     }
 
@@ -600,12 +622,27 @@ button:hover article
 
     h1
     {
-        font-size: 2rem;
+        font-size: 1.4rem;
+    }
+
+    h5
+    {
+        font-size: 1rem !important; 
+    }
+
+    h4
+    {
+        font-size : 1.2rem !important;
     }
 
     h3
     {
-        font-size: 1rem;
+        font-size: 1.1rem !important;
+    }
+
+    p
+    {
+        font-size: 1rem !important;
     }
 }
 
@@ -664,6 +701,12 @@ button:hover article
     {
         font-size: 0.6rem;
     }
+
+    .GameInfoLogo
+    {
+        width:1.6em;
+        height:1.6em;
+    }
 }
 
 /*#endregion Small Screen*/
@@ -697,8 +740,8 @@ button:hover article
 
     header
     {
-        padding-left:1em;
-        padding-right:1em;
+        padding-left:0.2rem;
+        padding-right:0.2rem;
     }
 
     button
@@ -732,7 +775,26 @@ button:hover article
 /*#region Mobile Big*/
 @media screen and (max-width: 590px) 
 {
+    .ContactLogos
+    {
+        width:2rem;
+        height:2rem;
+    }
 
+    #ProfileImg
+    {
+        transform: scale(60%);
+    }
+
+    h1
+    {
+        font-size:1.2rem;
+    }
+
+    h3
+    {
+        font-size:0.7rem;
+    }
 }
 
 /*#endregion Mobile Big */
