@@ -37,11 +37,11 @@ header
     background-repeat: repeat-x;
     background-size: cover;
 
-    -webkit-mask-image: url("Resources/Sources/wave.png");
+    -webkit-mask-image: url("../Resources/Sources/wave.png");
     -webkit-mask-repeat: repeat-x;
     -webkit-mask-size: 1400px 175px;
 
-    mask-image: url("Resources/Sources/wave.png");
+    mask-image: url("../Resources/Sources/wave.png");
     mask-repeat: repeat-x;
     mask-position: 0 0;
     mask-size: 1400px 175px;
