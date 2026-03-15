@@ -472,9 +472,10 @@ h5
     flex-direction: column;
     background-color: transparent;
 
+    padding:0.35rem;
     transition: 0.2s;
-    width:4rem;
-    height:4rem;
+    width:4.2rem;
+    height:4.2rem;
 }
 /*#endregion Classes*/
 

@@ -1,3 +1,5 @@
+/*#region Base Screen*/
+
 :root 
 {
   --header-height: 10rem;
@@ -26,11 +28,12 @@ header
     display: flex;
     position: fixed;
     width: 100%;
-    background-size: 1400px 175px;
-    height: 175px;
-    align-items:flex-start;
-    justify-content: center;
-    padding: 1rem 2rem;
+    margin:0;
+    background-size: 1400px 200px;
+    height: 200px;
+    align-items:center;
+    justify-content:center;
+    padding: 0rem 0rem;
     background-color: #06070a;
     z-index: 100;
 
@@ -39,14 +42,31 @@ header
 
     -webkit-mask-image: url("Resources/Sources/wave.png");
     -webkit-mask-repeat: repeat-x;
-    -webkit-mask-size: 1400px 175px;
+    -webkit-mask-size: 1400px 200px;
 
     mask-image: url("Resources/Sources/wave.png");
     mask-repeat: repeat-x;
     mask-position: 0 0;
-    mask-size: 1400px 175px;
+    mask-size: 1400px 200px;
 
     animation: wave-seamless 8s linear infinite;
+}
+
+iframe
+{
+    transition:0.2S;
+    position:fixed;
+    bottom:0;
+    right:0;
+    padding:1rem;
+    border-radius: 25px;
+}
+
+iframe:hover
+{
+    transition:0.2S;
+    width:600px;
+    height:200px;
 }
 
 @keyframes wave-seamless {
@@ -63,35 +83,47 @@ header
     }
 }
 
+#Return, #Profile, #Contacts
+{
+    display: flex;
+    align-self:flex-start !important;
+    margin-top:2rem !important;
+}
 
 #Return img
 {
+    margin-right:3rem;
     rotate: 180deg;
-    margin:2rem;
-    height:2rem;
-    width:2rem;
+    margin-top:1rem!important;
+    height:3rem;
+    width:2.8rem;
 }
 
 header img
 {
     transition: 0.2s;
-    margin:0.1rem;
+    padding:0.5rem;
+    margin-top: 1.2rem;
     height:4rem;
     width:4rem;
 }
 
 header #Profile
 {
-    padding:1rem;
     display: block;
-    justify-self: start;
+    position:relative;
+    justify-self: center;
+    text-align: center;
 }
 
 header #Contacts
 {
+    display: flex;
+    margin-top:0rem!important;
+    margin-left:5rem;
     transition:0.2s;
-    display: block;
-    justify-self: end;
+
+    justify-self: flex-end;
     padding-top: 1rem;
 
 }
@@ -232,3 +264,60 @@ p
 }
 
 /*#endregion Fonts*/
+
+/*#endregion Base Screen*/
+
+/*#region Ipad*/
+@media screen and (max-width: 900px) 
+{
+
+    #Contacts
+    {
+        justify-self: flex-end;
+        margin:0;
+        padding:0;
+    }
+
+    #Contacts img
+    {
+        height:3rem;
+        width:3rem;
+    }
+
+    #Return
+    {
+        width:2.2rem;
+        height:2.2rem;
+        margin:3rem;
+    }
+
+    #Profile
+    {
+        display: flex;
+
+    }
+
+    #Profile h1
+    {
+        font-size: 1.75rem;
+    }
+
+    #Profile h3
+    {
+        font-size:1.2rem;
+    }
+}
+
+/*#endregion Ipad */
+
+/*#region Mobile*/
+@media screen and (max-width: 660px)
+{
+    iframe:hover
+    {
+        width:100%;
+    }
+
+
+}
+/*#endregion Mobile*/
