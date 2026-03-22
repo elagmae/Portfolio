@@ -293,12 +293,11 @@ h5
 
 .SmallSection
 {
-    display:grid;
-    grid-template-rows: auto;
-    grid-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 
-    width:90%;
-
+    width: 90%;
     justify-self: center;
     align-content: center;
 }
@@ -308,6 +307,7 @@ h5
     justify-self: left;
     grid-column: 1/-1;
     margin-bottom:4vh;
+    width:100%;
 }
 
 .ContactLogos
@@ -507,9 +507,12 @@ a:hover
         filter:none;
     }
  
-    h1
+    .SectionTitle
     {
+        grid-column: 100%;
+        width:100%;
         font-size: 2em;
+        text-align: center;
     }
 
     h3
@@ -634,8 +637,8 @@ a:hover
 {
     section:not(.SmallSection)
     {
-            grid-template-columns: repeat(5, 1fr);
-            width:90%;
+        grid-template-columns: repeat(5, 1fr);
+        width:90%;
     }
 }
 

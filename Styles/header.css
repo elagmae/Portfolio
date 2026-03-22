@@ -3,7 +3,8 @@
     margin:0;
     padding:0;
     font-family: "Oswald", sans-serif;
-    --header-height:40vh;
+    --header-height:25rem;
+    --header-width:150vh;
 }
 
 body
@@ -15,6 +16,7 @@ body
 {
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    height:var(--header-height) !important;
     grid-column-gap: 0;
     grid-row-gap: 0;
 }
@@ -48,13 +50,13 @@ header
 
     -webkit-mask-image: url("../Resources/Sources/WaveMask.png");
     -webkit-mask-repeat: repeat-x;
-    -webkit-mask-size: 2000px var(--header-height);
+    -webkit-mask-size: var(--header-width) var(--header-height);
 
     
     mask-image: url("../Resources/Sources/WaveMask.png");
     mask-repeat: repeat-x;
     mask-position: 0 0;
-    mask-size: 1600px 35vh;
+    mask-size: var(--header-width) var(--header-height);
     z-index: 500;
     animation: wave-seamless 8s linear infinite;
     pointer-events: none;
@@ -112,7 +114,8 @@ section
     border-color:white !important;
     border-width: 0.5vh;
     border-style: solid;
-    height:20vh;
+    height:auto;
+    width:40%;
 }
 
 #Profile
@@ -121,7 +124,7 @@ section
     display: block;
     position:fixed;
     grid-column: 1;
-    width:35vh;
+    width:30%;
 }
 
 #Cv
@@ -129,8 +132,8 @@ section
     transition:0.2s;
     gap: 1vh;
     padding: 1vh;
-    height:8vh;
-    width:25vh;
+    height:auto;
+    width:55%;
 }
 
 #Cv:hover
@@ -143,9 +146,10 @@ section
     grid-column: 2;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
     gap: 2vh;
     padding: 2vh;
+    height:100%;
 }
 
 #Contacts img 
@@ -155,7 +159,8 @@ section
     display: block;
 }
 
-@keyframes wave-seamless {
+@keyframes wave-seamless 
+{
     from 
     {
         -webkit-mask-position: 0 0;
@@ -164,7 +169,56 @@ section
 
     to 
     {
-        -webkit-mask-position:  -1600px 0;
-        mask-position: -1600px 0;
+        -webkit-mask-position:  -var(--header-width) 0;
+        mask-position: -var(--header-width) 0;
     }
+}
+
+@media screen and (max-width: 1200px) 
+{
+    *
+    {
+        --header-height:15rem;
+    }
+
+    #Contacts
+    {
+        display:block;
+        justify-self: end;
+        align-items: normal;
+        height:100%;
+        padding:1rem;
+    }
+
+    #Contacts img
+    {
+        width:5vh;
+        height:5vh;
+    }
+
+    #Avatar, #Cv
+    {
+        justify-self: center;
+        margin-top:1vh;
+    }
+
+    #Cv
+    {
+        width:70%;
+    }
+
+    #Avatar
+    {
+        width:60%;
+        border-width:0.1rem;
+    }
+}
+
+@media screen and (max-height:1000px) and (max-width:600px)
+{
+    *
+    {
+        --header-height:12rem;
+    }
+
 }
