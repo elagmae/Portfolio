@@ -7,113 +7,93 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/page.css">
 
-    <link rel="stylesheet" href="../page.css">
     <title>Tranch'Orc Apocalypse</title>
 
 </head>
 
 <body>
-   
-    <header>
 
-        <a href="../index.html" id="Return"><img src="../Resources/Sources/Arrow.png"> </a>
-        
-        <div id="Profile">
-            <h1> POUTHIER Léa </h1>
-            <h3> Junior Game Developer</h3>
+    <a id="Return" href="../index.html"><img src="../Resources/Sources/Arrow.png"></a>
+
+    <article>
+
+        <div id="ProjectVisual">
+            <h2> TRANCH'ORC APOCALYPSE </h2>
+            <img src="../Resources/Gifs/TranchOrc.gif">
         </div>
 
-        <div id="Contacts">
-            <a href="https://github.com/elagmae" class="ContactLinks"><img src="../Resources/Sources/GithubLogo.png" style="filter: brightness(0) invert(1);"></a>
-            <a href="https://www.linkedin.com/in/elagmae" class="ContactLinks"><img src="../Resources/Sources/LinkedinLogo.png"></a>
-            <a href="https://elagmae.itch.io" class="ContactLinks"><img src="../Resources/Sources/ItchioLogo.png" style="filter: brightness(0) invert(1);"></a>
-            <a id="CV" href="../Resources/PouthierLéa_CV.pdf"> <img style="border-radius:5rem;" src="../Resources/Sources/Avatar.jpg" class="ContactLogos"> </a>     
-        </div>
+        <section id="Infos">
 
-    </header>
+            <h2> Concept </h2>
+            <p>
+                Jeu "Rail Brawler" 3D dans un désert à l’univers Diesel Punk, qui mélange gore et humour. Le joueur surfe sur son bouclier à travers les dunes et affronte des hordes d’orcs surfeurs dans une course-poursuite intense. C’est un véritable défouloir dans lequel le joueur pourra découper tout ce qui passe en travers de sa route.
+            </p>
 
-    <main>
+            <h2> Pourquoi ? </h2>
 
-        <article>
+            <p>
+                Ce projet a été produit dans un contexte scolaire, pour expérimenter Unreal et le support VR, que je ne connaissais quasi pas. La taille de l'équipe m'a permis de prendre certains risques.
+            </p>
 
-            <div id="ProjectVisual">
-                <h2> TRANCH'ORC APOCALYPSE </h2>
-                <img src="../Resources/Gifs/TranchOrc.gif">
-            </div>
+            <h2> Mon travail </h2>
 
-            <section id="Infos">
+            <ul>
+                <li>Création d'un système de génération de terrain.</li>
+                <li>Navmeshs dynamiques pour le mouvement des Orcs pour qu'ils ne collisionnent pas avec l'environnement.</li>
+                <li>Feedback visuel de dégâts sur le casque VR en fullscreen.</li>
+                <li>Mise en place des armures ennemies et de leur mouvement en cas d'impact.</li>
+            </ul>
 
-                <h2> Concept </h2>
-                <p>
-                    Jeu "Rail Brawler" 3D dans un désert à l’univers Diesel Punk, qui mélange gore et humour. Le joueur surfe sur son bouclier à travers les dunes et affronte des hordes d’orcs surfeurs dans une course-poursuite intense. C’est un véritable défouloir dans lequel le joueur pourra découper tout ce qui passe en travers de sa route.
-                </p>
+            <h2> Comment ? </h2>
 
-                <h2> Pourquoi ? </h2>
+            <h4> Navmeshs dynamiques </h4>
 
-                <p>
-                    Ce projet a été produit dans un contexte scolaire, pour expérimenter Unreal et le support VR, que je ne connaissais quasi pas. La taille de l'équipe m'a permis de prendre certains risques.
-                </p>
+            <ul>
+                <li>Utilisation des navmeshs de base pour prendre en compte les collisions.</li>
+                <li>Modification des paramètres prenant en compte le realtime.</li>
+                <li>Implémentation du mouvement avec les nodes de déplacement IA utilisant des navmeshs.</li>
+            </ul>
 
-                <h2> Mon travail </h2>
-
-                <ul>
-                    <li>Création d'un système de génération de terrain.</li>
-                    <li>Navmeshs dynamiques pour le mouvement des Orcs pour qu'ils ne collisionnent pas avec l'environnement.</li>
-                    <li>Feedback visuel de dégâts sur le casque VR en fullscreen.</li>
-                    <li>Mise en place des armures ennemies et de leur mouvement en cas d'impact.</li>
-                </ul>
-
-                <h2> Comment ? </h2>
-
-                <h4> Navmeshs dynamiques </h4>
-
-                <ul>
-                    <li>Utilisation des navmeshs de base pour prendre en compte les collisions.</li>
-                    <li>Modification des paramètres prenant en compte le realtime.</li>
-                    <li>Implémentation du mouvement avec les nodes de déplacement IA utilisant des navmeshs.</li>
-                </ul>
-
-                <section class="CodeGrid">
-                    <div>
-                        <img class="CodeImg" src="../Resources/Code/Tranchorc/DynamicNavmesh.gif">
-                        <p class="CodeText">Calculs en temps réel des navmeshs</p>
-                    </div>
-                </section>
-
-                <h4> Génération de terrain </h4>
-
-                <ul>
-                    <li>Création d'un actor qui fait spawner des prefabs randomisés.</li>
-                    <li>Espacement des prefabs par rapport à leur taille et une variable d'espacement.</li>
-                    <li>Optimisation de l'apparition avec un fog et une distance minime.</li>
-                </ul>
-
-                <h4> Armures des Orcs </h4>
-
-                <ul>
-                    <li> Placement random dans un dictionnaire qui permet de relier les socket aux meshs des armures.
-                </ul>
-
-                <section class="CodeGrid">
-                    <div>
-                        <img class="CodeImg" src="../Resources/Code/Tranchorc/Armure.gif">
-                        <p class="CodeText">Armure sur le mesh</p>
-                    </div>
-
-                    <div>
-                        <img class="CodeImg" src="../Resources/Code/Tranchorc/armure.png">
-                        <p class="CodeText">Mise en place en blueprint</p>
-                    </div>
-                </section>
-
+            <section class="CodeGrid">
+                <div>
+                    <img class="CodeImg" src="../Resources/Code/Tranchorc/DynamicNavmesh.gif">
+                    <p class="CodeText">Calculs en temps réel des navmeshs</p>
+                </div>
             </section>
 
-        </article>
-    
-        <iframe frameborder="0" src="https://itch.io/embed/3502892?border_width=2&amp;bg_color=dfd0a0&amp;fg_color=642e05&amp;link_color=cc7460&amp;border_color=b5a676" width="210" height="169"><a href="https://nantoor.itch.io/tranchorc-apocalypse">Tranch'Orc Apocalypse by Nantoor, Nathan Tazi, Léa Pouthier, sweeting1h, willowgreens4, Trompinette Studio, zwazo, Cass bloodfox, Geoffrey Voineau, Yael Picot</a></iframe>
+            <h4> Génération de terrain </h4>
 
-    </main>
+            <ul>
+                <li>Création d'un actor qui fait spawner des prefabs randomisés.</li>
+                <li>Espacement des prefabs par rapport à leur taille et une variable d'espacement.</li>
+                <li>Optimisation de l'apparition avec un fog et une distance minime.</li>
+            </ul>
+
+            <h4> Armures des Orcs </h4>
+
+            <ul>
+                <li> Placement random dans un dictionnaire qui permet de relier les socket aux meshs des armures.
+            </ul>
+
+            <section class="CodeGrid">
+                <div>
+                    <img class="CodeImg" src="../Resources/Code/Tranchorc/Armure.gif">
+                    <p class="CodeText">Armure sur le mesh</p>
+                </div>
+
+                <div>
+                    <img class="CodeImg" src="../Resources/Code/Tranchorc/armure.png">
+                    <p class="CodeText">Mise en place en blueprint</p>
+                </div>
+            </section>
+
+        </section>
+
+    </article>
+
+    <iframe frameborder="0" src="https://itch.io/embed/3502892?border_width=2&amp;bg_color=dfd0a0&amp;fg_color=642e05&amp;link_color=cc7460&amp;border_color=b5a676" width="210" height="169"><a href="https://nantoor.itch.io/tranchorc-apocalypse">Tranch'Orc Apocalypse by Nantoor, Nathan Tazi, Léa Pouthier, sweeting1h, willowgreens4, Trompinette Studio, zwazo, Cass bloodfox, Geoffrey Voineau, Yael Picot</a></iframe>
 
 </body>
 </html>

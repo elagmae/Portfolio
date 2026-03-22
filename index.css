@@ -211,14 +211,6 @@ h5
 
 /*#region Ids*/
 
-#CV p
-{
-    text-align: center;
-    font-size:1.5rem;
-    margin-right: auto;
-    padding-right:auto;
-}
-
 #ProjectsButton
 {
     display: block;
@@ -226,16 +218,6 @@ h5
     margin: 2em auto;
 
     text-align : center;
-}
-
-#ProfileImg
-{
-    transition: 0.2s ease-out;
-    border-radius: 50%;
-    flex:none;
-
-    width: 5.5em;
-    height: 6em;
 }
 
 #GamePage
@@ -344,12 +326,6 @@ education-card:hover
     box-shadow: 0px 0 10px black;
 }
 
-#ProfileImg:hover
-{
-    transition: 0.2s ease-out;
-    border-radius: 25%;
-}
-
 .ContactLogos:hover
 {
     background-color: transparent;
@@ -395,17 +371,6 @@ a:hover
     {
         width:1em;
         height:1em;
-    }
-
-    #ProfileImg
-    {
-        transform: scale(85%);
-    }
-
-    #Table a 
-    {
-        width:110px;
-        font-size: 0.8rem;
     }
 
     section:not(.SmallSection)
@@ -474,18 +439,6 @@ a:hover
 
 @media screen and (max-width: 1205px) 
 {
-
-    #ProfileImg
-    {
-        transform: scale(70%);
-    }
-
-
-    #Table
-    {
-        visibility: hidden;
-        width: 0%;
-    }
 
     button h2
     {
@@ -596,11 +549,6 @@ a:hover
     {
         width:2rem;
         height:2rem;
-    }
-
-    #ProfileImg
-    {
-        transform: scale(60%);
     }
 
     h1

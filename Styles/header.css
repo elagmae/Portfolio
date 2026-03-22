@@ -136,6 +136,13 @@ section
     width:55%;
 }
 
+img
+{
+    position:relative;
+    display: block;
+    top:0;
+}
+
 #Cv:hover
 {
     transform: scale(110%);
@@ -169,8 +176,8 @@ section
 
     to 
     {
-        -webkit-mask-position:  -var(--header-width) 0;
-        mask-position: -var(--header-width) 0;
+        mask-position: -150vh 0;
+        -webkit-mask-position:  -150vh 0;
     }
 }
 
