@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/x-icon" href="Resources/Sources/portfolioIcon.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
     <link rel="stylesheet" href="Styles/game-page.css">
 
     <script src="Scripts/GameCard.js"></script>
@@ -20,28 +26,23 @@
 
 <body>
 
-    <header>
-        <img src="Resources/Sources/profil.png" id="ProfileImg">
+    <header> </header>
 
-        <div style="padding-left: 1em; padding-right: 1em; margin-right:auto;">
-
-            <h1>Léa POUTHIER</h1>
-            <h3>Junior Game Developer</h3>
+    <main id="HeaderContainer">
+        <div id="Profile">
+            <a href="Resources/POUTHIER_Léa_CV.pdf"> <img id="Cv" src="Resources/Sources/CvButton.png"> </a>
+            <img id="Avatar" src="Resources/Sources/Avatar.jpg">
 
         </div>
 
-        <div id="Table">
-            <a href="#"> Projets </a>
-            <a href="#Skills"> Compétences </a>
-            <a href="#SkillsTitle"> Education </a>
-            <a href="#Footer"> Présentation </a>
+        <div id="Contacts">
+            <a href="https://elagmae.itch.io"> <img src="Resources/Sources/Itchio.png"> </a>
+            <a href="https://www.linkedin.com/in/elagmae/"> <img src="Resources/Sources/Linkedin.png"> </a>
+            <a href="https://github.com/elagmae"> <img src="Resources/Sources/Github.png"> </a>
         </div>
+    </main>
 
-        <contacts-link> </contacts-link>
-
-    </header>
-
-    <section>
+    <section id="FirstSection">
         <h1 class="SectionTitle" id="ProjectTitle">Projets</h1>
 
         <game-card 

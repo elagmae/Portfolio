@@ -1,0 +1,50 @@
+*
+{
+    --footer-height:35vh;
+}
+
+footer
+{
+    --background-width:2000px;
+    width: 100%;
+    height:var(--footer-height);
+    background-repeat: repeat-x;
+
+    background-color:rgb(20, 21, 32);
+    background-size: 100% 100%;
+
+    align-items:flex-start;
+    justify-content: center;
+
+    -webkit-mask-image: url("../Resources/Sources/ReturnedMaskWave.png");
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-size: 2000px var(--footer-height);
+
+
+    mask-image: url("../Resources/Sources/ReturnedMaskWave.png");
+    mask-repeat: repeat-x;
+    mask-position: 0 0;
+    mask-size: 2000px var(--footer-height);
+    z-index: 500;
+    animation: wave-seamless 8s linear infinite;
+}
+
+footer h1
+{
+    margin-top:8vh;
+}
+
+
+@keyframes wave-seamless {
+    from 
+    {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0 ;
+    }
+
+    to 
+    {
+        -webkit-mask-position:  -1600px 0;
+        mask-position: -1600px 0;
+    }
+}

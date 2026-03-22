@@ -10,11 +10,10 @@
 {
     scrollbar-width: 2rem;
     scrollbar-color: rgb(255, 255, 255) rgb(9, 10, 10);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Oswald", sans-serif;
     color:white;
 
     margin:0;
-    box-sizing: border-box;
 }
 
 body
@@ -151,19 +150,23 @@ article
     position:relative;
     display: block;
     justify-self: center;
+    width:100%;
 }
 
 #ProjectVisual img
 {
+    display: block;
     border-style: solid;
     border-width: 1px;
+    justify-self: center;
+    width:80%;
 }
 
 #ProjectVisual h2
 {
     position: relative;
     top:2rem;
-    width:70%;
+    width:50%;
     padding:2rem;
 
     display: block;

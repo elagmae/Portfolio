@@ -1,0 +1,170 @@
+*
+{
+    margin:0;
+    padding:0;
+    font-family: "Oswald", sans-serif;
+    --header-height:40vh;
+}
+
+body
+{
+    background-color: #080910;
+}
+
+#HeaderContainer 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+#Cv img 
+{
+    transition:0.2s;
+}
+
+#Cv img:hover
+{
+    transform: scale(110%);
+}
+
+header
+{
+    display: grid;
+    position: fixed;
+    top:0;
+    margin:0;
+    padding:0;
+    width: 100%;
+    height:var(--header-height);
+    background-repeat: repeat-x;
+
+    background-image: url("../Resources/Sources/Banner.png");
+    background-size: 100% 100%;
+
+    align-items:flex-start;
+    justify-content: center;
+
+    -webkit-mask-image: url("../Resources/Sources/WaveMask.png");
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-size: 2000px var(--header-height);
+
+    
+    mask-image: url("../Resources/Sources/WaveMask.png");
+    mask-repeat: repeat-x;
+    mask-position: 0 0;
+    mask-size: 1600px 35vh;
+    z-index: 500;
+    animation: wave-seamless 8s linear infinite;
+    pointer-events: none;
+}
+
+#FirstSection
+{
+    padding-top:var(--header-height);
+}
+
+main
+{
+    pointer-events: none;
+    position:fixed;
+    z-index: 500;
+    width:100%;
+}
+
+main a
+{
+    pointer-events: auto;
+}
+
+h1
+{
+    font-size: 6vh;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:white;
+}
+
+section
+{
+    padding:0;
+    margin: 0;
+    margin-right:10vh;
+    margin-left:10vh;
+}
+
+#Projects
+{
+    padding-top:var(--header-height)!important;
+    font-size:1.8rem;
+}
+
+#Avatar, #Cv
+{
+    justify-self: center;
+    margin-top:3vh;
+}
+
+#Avatar
+{
+    border-radius: 100%;
+    border-color:white !important;
+    border-width: 0.5vh;
+    border-style: solid;
+    height:20vh;
+}
+
+#Profile
+{
+    margin-top:2vh;
+    display: block;
+    position:fixed;
+    grid-column: 1;
+    width:35vh;
+}
+
+#Cv
+{
+    transition:0.2s;
+    gap: 1vh;
+    padding: 1vh;
+    height:8vh;
+    width:25vh;
+}
+
+#Cv:hover
+{
+    transform: scale(110%);
+}
+
+#Contacts 
+{
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh;
+}
+
+#Contacts img 
+{
+    height: 8vh;
+    width: 8vh;
+    display: block;
+}
+
+@keyframes wave-seamless {
+    from 
+    {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0 ;
+    }
+
+    to 
+    {
+        -webkit-mask-position:  -1600px 0;
+        mask-position: -1600px 0;
+    }
+}

@@ -2,6 +2,17 @@
 
 /*#region Base*/
 
+game-card
+{
+    border-style:solid;
+    border-width:0.1rem;
+    box-shadow: 0px 0 10px black;
+    transition: transform 0.1s ease-out;
+    transform: translateY(0px);
+    border-radius: 0.1em;
+    justify-self: center;
+}
+
 #GamePage
 {
     box-sizing: border-box;
@@ -12,6 +23,12 @@
     margin:2rem;
     display:grid;
     grid-template-columns: 50% 50%;
+}
+
+.ButtonLink
+{
+    width:100%;
+    height:100%;
 }
 
 #gameOverlay
@@ -70,6 +87,7 @@
     padding:0;
     margin:0;
     font-size:2rem;
+    font-weight: lighter;
 }
 
 #GamePageClosing
@@ -95,9 +113,7 @@
     pointer-events: none;
     display: block;
     justify-self:center;
-    scale:70%;
-    margin-top:-10%;
-    margin-bottom:-10%;
+
     transform-origin: top center bottom;
 }
 
@@ -121,12 +137,19 @@
 
 .Link p
 {
+    font-weight: lighter;
     transition : 0.2s;
     opacity: 0;
     cursor:default;
     display: block;
 
     text-align:center;
+}
+
+p
+{
+    font-weight: lighter;
+    color:white;
 }
 
 .Link img
@@ -148,7 +171,7 @@
     opacity: 1;
 }
 
-.Link:hover img
+.Link:hover
 {
     transition:0.2s;
     scale : 50%;
@@ -194,6 +217,63 @@
 
 }
 
+.Arrow
+{
+    aspect-ratio: 0.7rem;
+    position: relative;
+    margin-left:100%;
+    margin-top:2rem;
+    width:1.5rem;
+    visibility: collapse;
+}
+
+.GameGif
+{
+    object-fit: cover;
+    display: block;
+
+    overflow: hidden !important;
+    aspect-ratio: 1.7;
+
+}
+
+.GameCardInfos
+{
+    justify-items: left;
+    margin:2em;
+}
+
+.GameLink
+{
+    text-align: left;
+    display: grid;
+    width:100%;
+    grid-template-columns: 6fr 0.5fr;
+}
+
+.GameLinkImg
+{
+    justify-self: right;
+    width:1rem;
+    height:1.5rem;
+}
+
+.GameCardContext
+{
+    position:relative;
+    margin:0;
+    padding:0;
+}
+
+.GameInfoLogo
+{
+    display: inline-block;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+    width:1em;
+    height:1em;
+}
+
 .Context
 {
     display: block;
@@ -203,14 +283,73 @@
 
 .Context h2
 {
+    font-weight: lighter;
     text-align: center;
     font-size:2.5rem;
 }
 
 .Context p
 {
+    font-weight: lighter;
     font-size:1.5rem;
     text-align: center;
+}
+
+button h2
+{
+    font-weight: 400;
+}
+
+button h3
+{
+    font-weight: 300;
+}
+
+button:hover img:not(.GameLinkImg)
+{
+    transition:0.2s;
+    filter:blur(0px) grayscale(0%);
+}
+
+game-card:hover
+{
+    transition:0.2s;
+    border-style:solid;
+    border-width:0.1rem;
+    transition: transform 0.1s ease-out;
+    transform: translateY(-20px);
+}
+
+
+button:hover
+{
+    transition:0.2s;
+    background-color: rgb(13, 14, 15);
+}
+
+button:hover h2
+{
+    transition:0.2s;
+    color:rgb(255, 128, 149);
+}
+
+button:hover h3
+{
+    transition:0.2s;
+    color:rgb(94, 186, 95);
+}
+
+button:hover article
+{
+    animation-name: Disparition;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes Disparition 
+{
+    from{opacity: 1;}
+    to{opacity: 0;}
 }
 
 /*#endregion Right*/

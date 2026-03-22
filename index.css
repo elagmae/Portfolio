@@ -7,100 +7,20 @@
     scroll-behavior: smooth;
     scrollbar-width: 2rem;    
     scrollbar-color: #e76592 #271f39;
-    font-family: 'Courier New', Courier, monospace;
-    color:white;
-
-    margin:0;
     box-sizing: border-box;
     overflow-x: hidden;
+    border-color:#6a465e;
+}
+
+*:hover
+{
+    border-color:greenyellow;
 }
 
 body
 {
     background-color: #080910;
     color:rgb(255, 255, 255);
-}
-
-#Table
-{
-    display:flex;
-    flex-direction:row;
-    grid-gap:25px;
-    padding:10px;
-    padding-top:2% !important;
-
-    z-index: 2000;
-    justify-self : center;
-    justify-content: center;
-    justify-items: center;
-
-    background-color: #0000003a;
-    align-content: center;
-
-    border-radius: 30px;
-}
-
-#Table a
-{
-    border-style: solid;
-    border-color:rgb(153, 91, 102);
-    border-width: 1px;
-    border-radius: 30px;
-    width:130px;
-    height:30px;
-
-    text-align: center;
-    align-content: center;
-}
-
-#Table a:hover
-{
-    transition: 0.1s;
-    border-color: yellowgreen;
-    transform:translateY(5px);
-    border-width: 1.5px;
-}
-
-header 
-{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    background-size: 1400px 175px;
-    height: 175px;
-    align-items:flex-start;
-    justify-content: center;
-    padding: 1rem 2rem;
-    background-color: #06070a;
-    z-index: 100;
-
-    background-repeat: repeat-x;
-    background-size: cover;
-
-    -webkit-mask-image: url("Resources/Sources/wave.png");
-    -webkit-mask-repeat: repeat-x;
-    -webkit-mask-size: 1400px 175px;
-
-    mask-image: url("Resources/Sources/wave.png");
-    mask-repeat: repeat-x;
-    mask-position: 0 0;
-    mask-size: 1400px 175px;
-
-    animation: wave-seamless 8s linear infinite;
-}
-
-@keyframes wave-seamless {
-    from 
-    {
-        -webkit-mask-position: 0 0 ;
-        mask-position: 0 0 ;
-    }
-
-    to 
-    {
-        -webkit-mask-position:  -1400px 0;
-        mask-position: -1400px 0;
-    }
 }
 
 
@@ -111,7 +31,6 @@ section:not(.SmallSection)
     grid-template-rows: auto;
     grid-gap: 1.5rem;
 
-    padding-top:12rem;
     padding-bottom: 5rem;
 
     width:90%;
@@ -147,18 +66,6 @@ button img:not(.GameInfoLogo, .GameLinkImg)
     height:100%;
     border-style: hidden;
     filter:blur(0.5px) grayscale(20%);
-}
-
-game-card
-{
-    border-style:solid;
-    border-width:0.1rem;
-    border-color:rgb(153, 91, 102);
-    box-shadow: 0px 0 10px black;
-    transition: transform 0.1s ease-out;
-    transform: translateY(0px);
-    border-radius: 0.1em;
-    justify-self: center;
 }
 
 button
@@ -222,7 +129,6 @@ education-card
 
     border-style: solid;
     border-width:0.1rem;
-    border-color:rgb(153, 91, 102);
     border-radius: 0.1em;
 
 }
@@ -236,6 +142,11 @@ technical-exp:not(.ButtonLink)
     display: inline-block;
     justify-self: center;
     margin-top:-3em;
+}
+
+technical-exp p 
+{
+    font-weight: lighter;
 }
 
 contacts-link
@@ -260,16 +171,10 @@ technical-exp .Exp
     transition:0.2s;
     color:white;
     background-color:rgb(18, 19, 22);
-    border-color: rgb(153, 91, 102);
     border-style: solid;
     border-radius: 0.1em;
     border-width: 0.07em;
     font-size:2rem;
-}
-
-h1
-{
-    font-size:2.7em;
 }
 
 h2
@@ -386,26 +291,6 @@ h5
     font-size:1.5rem;
 }
 
-.Arrow
-{
-    aspect-ratio: 0.7rem;
-    position: relative;
-    margin-left:100%;
-    margin-top:2rem;
-    width:1.5rem;
-    visibility: collapse;
-}
-
-.GameGif
-{
-    object-fit: cover;
-    display: block;
-
-    overflow: hidden !important;
-    aspect-ratio: 1.7;
-
-}
-
 .SmallSection
 {
     display:grid;
@@ -422,47 +307,7 @@ h5
 {
     justify-self: left;
     grid-column: 1/-1;
-
-    margin:1em;
-}
-
-.GameCardInfos
-{
-    justify-items: left;
-    margin:2em;
-}
-
-.GameLink
-{
-    text-align: left;
-    display: grid;
-    width:100%;
-    grid-template-columns: 6fr 0.5fr;
-}
-
-.GameLinkImg
-{
-    justify-self: right;
-    width:1rem;
-    height:1.5rem;
-}
-
-.GameCardContext
-{
-    position:relative;
-    margin:0;
-    padding:0;
-}
-
-.GameInfoLogo
-{
-    display: inline-block;
-    align-content: center;
-    justify-content: center;
-    margin-top:1.6em;
-    margin-bottom:1.6em;
-    width:1em;
-    height:1em;
+    margin-bottom:4vh;
 }
 
 .ContactLogos
@@ -485,7 +330,6 @@ technical-exp .Exp:hover, a:not(.ButtonLink)
 {
     background-color: rgb(13, 14, 15);
     transition:0.2s;
-    border-color:greenyellow;
     scale:110%;
 }
 
@@ -497,7 +341,6 @@ education-card:hover
     width:100%;
     border-style:solid;
     border-width:0.1rem;
-    border-color:greenyellow;
     box-shadow: 0px 0 10px black;
 }
 
@@ -515,54 +358,12 @@ education-card:hover
     transform: scale(115%);
 }
 
-button:hover img:not(.GameLinkImg)
+a:hover
 {
-    transition:0.2s;
-    filter:blur(0px) grayscale(0%);
-}
-
-game-card:hover
-{
-    transition:0.2s;
-    border-style:solid;
-    border-width:0.1rem;
-    border-color:greenyellow;
-    transition: transform 0.1s ease-out;
-    transform: translateY(-20px);
-    box-shadow: 0px 0 10px black;
+    transform: scale(110%);
 }
 
 
-button:hover
-{
-    transition:0.2s;
-    background-color: rgb(13, 14, 15);
-}
-
-button:hover h2
-{
-    transition:0.2s;
-    color:rgb(255, 128, 149);
-}
-
-button:hover h3
-{
-    transition:0.2s;
-    color:rgb(94, 186, 95);
-}
-
-button:hover article
-{
-    animation-name: Disparition;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;  
-}
-
-@keyframes Disparition 
-{
-    from{opacity: 1;}
-    to{opacity: 0;}
-}
 
 /*#endregion Animations*/
 
@@ -756,13 +557,7 @@ button:hover article
         padding-left: 10%;
         padding-right: 10%;
     }
-
-    header
-    {
-        padding-left:0.2rem;
-        padding-right:0.2rem;
-    }
-
+    
     button
     {
         filter:blur(0px) grayscale(0%);
