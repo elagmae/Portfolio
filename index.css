@@ -25,19 +25,13 @@ body
 
 
 section:not(.SmallSection)
-{   
-    display:grid;
+{
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
     grid-gap: 1.5rem;
 
-    padding-bottom: 5rem;
-
-    width:90%;
-    box-sizing: border-box;
-
-    justify-self: center;
-    align-self: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 footer

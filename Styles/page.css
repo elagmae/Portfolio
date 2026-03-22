@@ -43,6 +43,7 @@ iframe:hover
     right:0;
     align-self:flex-start !important;
     margin:2vh !important;
+    z-index: 100;
 }
 
 #Return img
@@ -186,48 +187,6 @@ p
 
 /*#endregion Fonts*/
 
-/*#endregion Base Screen*/
-
-/*#region Ipad*/
-@media screen and (max-width: 900px) 
-{
-
-    #Contacts
-    {
-        justify-self: flex-end;
-        margin:0;
-        padding:0;
-    }
-
-    #Contacts img
-    {
-        height:3vh;
-        width:3vh;
-    }
-
-    #Return
-    {
-        width:2.2vh;
-        height:2.2vh;
-        margin:3vh;
-    }
-
-    #Profile
-    {
-        display: flex;
-
-    }
-
-    #Profile h1
-    {
-        font-size: 1.75vh;
-    }
-
-    #Profile h3
-    {
-        font-size:1.2vh;
-    }
-}
 
 /*#endregion Ipad */
 
